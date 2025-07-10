@@ -1,0 +1,111 @@
+@use "../variables/variables" as v;
+@use "../variables/mixins" as m;
+
+.header{
+  &__fixed{
+    //position: fixed;
+    width: 100%;
+  }
+
+  &__wrapper{
+    max-width: 1458px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+    padding: 50px 32px 0;
+    margin: 0 auto;
+  }
+
+  &__container{
+    &:first-of-type{
+
+    }
+
+    &:last-of-type{
+      flex: 1 1 calc(88.55% - 212px);
+      max-width: calc(88.55% - 212px);
+
+    }
+  }
+
+  &__logo-icon{
+    width: 18px;
+    height: 28px;
+
+    background: linear-gradient(130deg,
+            v.$color-gradient-4 18.31%,
+            v.$color-gradient-3 43.26%,
+            v.$color-gradient-1 85.44%,
+            v.$color-gradient-2 100%);
+    -webkit-mask: url('../../assets/svg/ETH.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask: url('../../assets/svg/ETH.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &__logo{
+    display: flex;
+    align-items: center;
+    font-family: v.$font-family-primary;
+    font-size: v.$font-size-full-m;
+    font-weight: v.$font-weight-bold;
+
+    span{
+      opacity: 0.6;
+      margin-right: -5px;
+    }
+  }
+
+  &__full-screen{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner{
+    &:last-of-type{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      svg{
+        fill: v.$color-text
+      }
+    }
+  }
+
+  &__navigation{
+    ul{
+      display: flex;
+      justify-content: space-between;
+      gap: 66px;
+      font-family: v.$font-family-primary;
+      font-size: v.$font-size-full-m;
+      font-weight: v.$font-weight-bold;
+      opacity: 0.6;
+    }
+  }
+
+
+
+ &__burger{
+   display: none;
+
+   @include m.respond(tablet){
+     display: block;
+   }
+
+   @include m.respond(mobile){
+     display: block;
+   }
+
+ }
+
+
+}
+
+

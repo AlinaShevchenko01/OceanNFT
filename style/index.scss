@@ -1,0 +1,15 @@
+@use "base/reset";
+@use "base/base";
+
+@use "variables/fonts";
+@use "variables/mixins" as m;
+@use "variables/variables" as v;
+@use "variables/utils";
+
+@use "components/footer";
+@use "components/header";
+@use "components/hero";
+@use "components/section1-Top-nft";
+@use "components/section2-collections";
+@use "components/section3-top-sellers";
+@use "components/section4-what-NFT";

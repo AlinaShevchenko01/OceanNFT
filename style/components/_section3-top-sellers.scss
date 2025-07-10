@@ -1,0 +1,128 @@
+@use "../variables/variables" as v;
+@use "../variables/mixins" as m;
+
+.top-sellers{
+  &__wrapper{
+    max-width: 1445px;
+    text-align: center;
+    padding: 160px 32px 0;
+    margin: 0 auto;
+  }
+
+  &__title{
+    margin-bottom: 23px;
+
+    span{
+      color: v.$color-gradient-4;
+    }
+
+    svg{
+      fill: v.$color-gradient-4;
+    }
+  }
+
+  &__text{
+    max-width: 506px;
+    font-family: v.$font-family-fourth;
+    font-size: v.$font-size-full-xs;
+    line-height: 1.4;
+    margin: 0 auto 59px;
+  }
+
+  &__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 34px;
+    column-gap: 24px;
+    margin-bottom: 62px;
+  }
+
+  &__card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 13px;
+    flex: 0 1 calc((100%/3) - (68px/3));
+    max-width: calc((100%/3) - (68px/3));
+    border-radius: 29px;
+    border: 3px solid v.$color-border-gradient-3;
+    backdrop-filter: blur(76px);
+    -webkit-backdrop-filter: blur(76px);
+    font-family: v.$font-family-fourth;
+    font-weight: v.$font-weight-medium;
+    padding: 23px 17px 15px 26px;
+
+    &:nth-child(odd){
+      .top-sellers__percent{
+        color: v.$color-top-sellers-1;
+        background: linear-gradient(135deg,
+                v.$color-top-sellers-bgc-1 0%,
+                v.$color-top-sellers-bgc-1 100%);
+        border-color: v.$color-top-sellers-border-1;
+      }
+    }
+
+    &:nth-child(even){
+      .top-sellers__percent{
+        color: v.$color-top-sellers-2;
+        background: linear-gradient(135deg,
+                v.$color-top-sellers-bgc-2 0%,
+                v.$color-top-sellers-bgc-2 100%);
+        border-color: v.$color-top-sellers-border-2;
+      }
+    }
+  }
+
+  &__position{
+    flex: 0 1 calc(4.14% - (13px/2));
+    font-size: v.$font-size-full-m;
+    line-height: 2.32;
+    opacity: 0.8;
+  }
+
+  &__avatar{
+    flex: 0 1 calc(20% - 13px);
+    max-width: 70px;
+  }
+
+
+  &__info{
+    flex: 0 1 calc(47.29% - 13px);
+    font-size: v.$font-size-full-m;
+    line-height: 2.32;
+  }
+
+  &__name{
+    text-align: left;
+  }
+
+  &__coins{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: v.$font-size-mobile-l;
+    line-height: 3.21;
+    fill: v.$color-text;
+    opacity: 0.8;
+    margin-top: -6px;
+  }
+
+  &__percent{
+    flex: 0 1 calc(28.57% - (13px/2));
+    font-size: v.$font-size-mobile-xl;
+    line-height: 2.4;
+    border: 1px solid;
+    border-radius: 18px;
+  }
+
+  &__btn{
+    font-family: v.$font-family-second;
+    font-size: v.$font-size-full-s;
+    font-weight: v.$font-weight-semi-bold;
+    min-width: 17%;
+    padding: 11px 0;
+  }
+
+
+}

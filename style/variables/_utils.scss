@@ -1,0 +1,210 @@
+@use "../variables/variables" as v;
+@use "../variables/mixins" as m;
+
+.btn-gradient{
+  color: v.$color-text;
+  fill: v.$color-text;
+  background: linear-gradient(130deg,
+          v.$color-gradient-4 18.31%,
+          v.$color-gradient-3 43.26%,
+          v.$color-gradient-1 85.44%,
+          v.$color-gradient-2 100%);
+  box-shadow: 0 6px 140px 0 rgba(255, 86, 246, 0.51);
+  backdrop-filter: blur(276px);
+  -webkit-backdrop-filter: blur(276px);
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(45deg,
+          v.$color-border-gradient-1 47%,
+          v.$color-border-gradient-2 97%) 1;
+  transition: opacity 0.5s ease;
+
+
+  @include m.respond(pc){
+    &:hover{
+      background: linear-gradient(-130deg,
+              v.$color-gradient-4 18.31%,
+              v.$color-gradient-3 43.26%,
+              v.$color-gradient-1 85.44%,
+              v.$color-gradient-2 100%);
+
+      border-image: linear-gradient(-45deg,
+              v.$color-border-gradient-1 47%,
+              v.$color-border-gradient-2 97%) 1;
+      opacity: 0.9;
+    }
+  }
+
+  @include m.respond(laptop){
+    &:hover{
+      background: linear-gradient(-130deg,
+              v.$color-gradient-4 18.31%,
+              v.$color-gradient-3 43.26%,
+              v.$color-gradient-1 85.44%,
+              v.$color-gradient-2 100%);
+      border-image: linear-gradient(-45deg,
+              v.$color-border-gradient-1 47%,
+              v.$color-border-gradient-2 97%) 1;
+      opacity: 0.9;
+    }
+  }
+}
+
+.cards{
+  &__wrapper{
+    max-width: 438px;
+    display: flex;
+    justify-content: space-between;
+    gap:24px;
+    font-family: v.$font-family-second;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 3px solid;
+    border-image:linear-gradient(45deg,
+            rgba(255, 255, 255, 0.24) 0%,
+            rgba(255, 255, 255, 0.28) 100%) 1;
+    padding: 36px 24px 26px 27px;
+  }
+
+  &__column:first-of-type{
+    flex: 0 1 calc(57.27% - 12px);
+  }
+
+  &__column:last-of-type{
+    flex: 0 1 calc(42.73% - 12px);
+  }
+
+  &__title{
+    font-size: v.$font-size-full-xl;
+    font-weight: v.$font-weight-bold;
+    line-height: 200%;
+    margin-bottom: -2px;
+  }
+
+  &__customer{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  &__customer-ava{
+    max-width: 38px;
+  }
+
+  &__name{
+    font-size: v.$font-size-full-l;
+    font-weight: v.$font-weight-semi-bold;
+    line-height: 229%;
+  }
+
+  &__check-mark{
+    max-width: 16px;
+  }
+
+  &__text{
+    font-size: v.$font-size-mobile-xl;
+    font-weight: v.$font-weight-semi-bold;
+    line-height: 3.2;
+    opacity: 0.7;
+    margin-bottom: -16px;
+  }
+
+  &__coin{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    fill: v.$color-text;
+  }
+
+  &__coin-name{
+    font-family: v.$font-family-primary;
+    font-size: v.$font-size-mobile-m;
+    font-weight: v.$font-weight-semi-bold;
+  }
+
+  &__coin-price{
+    font-size: v.$font-size-mobile-xl;
+    font-weight: v.$font-weight-regular;
+    line-height: 320%;
+    opacity: 0.7;
+  }
+
+  &__timer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 23px;
+    margin-top: -18px;
+  }
+
+  &__timer-value{
+    font-size: v.$font-size-full-xl;
+    font-weight: v.$font-weight-semi-bold;
+    line-height: 2;
+  }
+
+  &__timer-description{
+    font-size: v.$font-size-mobile-xl;
+    font-weight: v.$font-weight-medium;
+    line-height: 3.2;
+    opacity: 0.7;
+    margin: -22px 0 26px;
+  }
+
+  &__btn{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 13px;
+    font-size: v.$font-size-full-xl;
+    font-weight: v.$font-weight-semi-bold;
+    padding: 10px 6px;
+
+    svg{
+      width: 32px;
+      height: 12px;
+    }
+  }
+}
+
+.btn-view{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-family: v.$font-family-primary;
+  font-size: v.$font-size-full-xxl;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-text;
+  fill: v.$color-text;
+  border: none;
+  background-color: transparent;
+
+  @include m.respond(pc){
+    &:hover{
+      background: linear-gradient(312deg,
+              v.$color-gradient-5 0%,
+              v.$color-gradient-4 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      fill: v.$color-gradient-4;
+    }
+  }
+
+  @include m.respond(laptop){
+    &:hover{
+      background: linear-gradient(312deg,
+              v.$color-gradient-5 0%,
+              v.$color-gradient-4 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      fill: v.$color-gradient-4;
+    }
+  }
+}

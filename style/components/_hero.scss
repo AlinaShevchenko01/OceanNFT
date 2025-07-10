@@ -1,0 +1,225 @@
+@use "../variables/variables" as v;
+@use "../variables/mixins" as m;
+
+.hero{
+  &__wrapper{
+    max-width: 1458px;
+    padding: 106px 32px 0;
+    margin: 0 auto;
+
+  }
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 54px;
+
+    &:last-of-type{
+      align-items: center;
+    }
+  }
+
+  &__column{
+    &:first-of-type{
+      flex: 0 1 calc(63.33% - 27px);
+      max-width: 770px;
+      margin-bottom: 122px;
+    }
+
+    &:last-of-type{
+      position: relative;
+      flex: 0 1 calc(36.67% - 27px);
+      max-width: calc(36.67% - 27px);
+      padding-top: 22px;
+    }
+  }
+
+  &__title{
+    max-width: 770px;
+    margin-bottom: 21px;
+  }
+
+  &__title_color{
+    background: linear-gradient(312deg,
+            v.$color-gradient-5 0%,
+            v.$color-gradient-4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text{
+    max-width: 658px;
+    font-family: v.$font-family-second;
+    font-size: v.$font-size-full-xxl;
+    font-weight: v.$font-weight-regular;
+    line-height: 1.67;
+    margin-bottom: 47px;
+  }
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    &:first-of-type{
+      max-width: 436px;
+      margin-bottom: 69px;
+    }
+
+    &:last-of-type{
+      max-width: 480px;
+    }
+  }
+
+  &__btn{
+    font-family: v.$font-family-primary;
+    font-size: v.$font-size-full-m;
+    font-weight: v.$font-weight-bold;
+    padding: 20px 32px 19px 67px;
+    -webkit-mask-image: url('../../assets/svg/btn-mask.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+    mask-image: url('../../assets/svg/btn-mask.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+
+  }
+
+  &__create{
+    font-family: v.$font-family-primary;
+    font-size: v.$font-size-full-m;
+    font-weight: v.$font-weight-bold;
+    background: linear-gradient(312deg,
+            v.$color-gradient-4 0%,
+            v.$color-gradient-5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__info{
+    font-family: v.$font-family-sixth;
+    font-size: v.$font-size-full-xxxl;
+    font-weight: v.$font-weight-regular;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  &__info-description{
+    font-family: v.$font-family-seventh;
+    font-size: v.$font-size-full-xs;
+    font-weight: v.$font-weight-regular;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+
+  &__coin-icon{
+    fill: v.$color-text;
+    opacity: 0.5;
+  }
+
+ &__card-fon{
+   max-width: 100%;
+   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25),
+               0 4px 4px 0 rgba(0, 0, 0, 0.25),
+               0 4px 4px 0 rgba(0, 0, 0, 0.25);
+   -webkit-mask-image: url('../../assets/img/hero/cards-mask.webp');
+   -webkit-mask-repeat: no-repeat;
+   -webkit-mask-position: center;
+   -webkit-mask-size: cover;
+
+   mask-image: url('../../assets/img/hero/cards-mask.webp');
+   mask-repeat: no-repeat;
+   mask-position: center;
+   mask-size: cover;
+ }
+
+  &__cards{
+    position: absolute;
+    top: 380px;
+    left: 148px;
+
+    .cards__wrapper{
+
+      min-width: 342px;
+      -webkit-mask-image: url('../../assets/img/hero/mask-for-card-customer.webp');
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: top center;
+      -webkit-mask-size: cover;
+      mask-image: url('../../assets/img/hero/mask-for-card-customer.webp');
+      mask-repeat: no-repeat;
+      mask-position: top center;
+      mask-size: cover;
+      padding: 28px 18px 20px 20px;
+    }
+
+    .cards__title{
+      font-size: v.$font-size-full-xs;
+      margin-bottom: 2px;
+    }
+
+    .cards__customer{
+      gap: 3px;
+      margin-bottom: 10px;
+    }
+
+    .cards__customer-ava{
+      max-width: 28px;
+    }
+
+    .cards__name{
+      font-size: v.$font-size-mobile-xxl;
+    }
+
+    .cards__text{
+      font-size: v.$font-size-mobile-s;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .cards__coin{
+      gap: 5px;
+      margin-top: -7px;
+
+      svg{
+        width: 10px;
+        height: 18px;
+      }
+    }
+
+    .cards__coin-name{
+      font-size: v.$font-size-mobile-xxs;
+    }
+
+    .cards__coin-price{
+      font-size: v.$font-size-mobile-s;
+    }
+
+    .cards__timer-container{
+      margin-top: 0;
+    }
+
+    .cards__timer-value{
+      font-size: v.$font-size-full-xxs;
+    }
+
+    .cards__timer-description{
+      font-size: v.$font-size-mobile-s;
+      line-height: 1.6;
+      margin: -10px 0 19px;
+    }
+
+    .cards__btn{
+      font-size: v.$font-size-full-xs;
+      gap: 4px;
+      border-radius: 2px;
+      padding: 6px 5px;
+    }
+  }
+}

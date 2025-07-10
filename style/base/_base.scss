@@ -1,0 +1,50 @@
+@use "../variables/variables" as v;
+@use "../variables/mixins" as m;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image: url("../../assets/img/hero/pages-bgc.webp");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: v.$color-text;
+
+}
+
+a{
+  text-decoration: none;
+  color: v.$color-text;
+}
+
+h1{
+  font-family: v.$font-family-fifth;
+  font-size: v.$font-size-full-title;
+  font-weight: v.$font-weight-semi-bold;
+  line-height: 1.37;
+
+  @include m.respond(tablet){
+    font-size: v.$font-size-mobile-title;
+  }
+
+  @include m.respond(mobile){
+    font-size: v.$font-size-mobile-title;
+  }
+}
+
+h2{
+  font-family: v.$font-family-primary;
+  font-size: v.$font-size-full-xxl;
+  font-weight: v.$font-weight-bold;
+
+  @include m.respond(tablet){
+    font-size: v.$font-size-full-xxs;
+  }
+
+  @include m.respond(mobile){
+    font-size: v.$font-size-full-xxs;
+  }
+
+}

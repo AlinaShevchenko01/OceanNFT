@@ -1,0 +1,183 @@
+@use "../variables/variables" as v;
+@use "../variables/mixins" as m;
+
+.collections{
+  &__wrapper{
+    max-width: 1448px;
+    padding: 160px 32px 0;
+    margin: 0 auto;
+  }
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 248px;
+
+    &:last-of-type{
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  &__column{
+    flex: 1 0 calc(62.78% - 65px);
+    max-width: calc(62.78% - 65px);
+  }
+
+  &__swiper-skins{
+    flex: 1 1 calc(37.22% - 65px);
+    max-width: calc(37.22% - 65px);
+
+
+    img{
+      max-width: 100%;
+      max-height: 654px;
+    }
+  }
+
+
+  &__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 43px;
+    margin-top: 47px;
+
+    button{
+      max-width: 368px;
+      width: 100%;
+      font-family: v.$font-family-primary;
+      font-size: v.$font-size-full-xxl;
+      font-weight: v.$font-weight-bold;
+      color: v.$color-text;
+      opacity: 0.5;
+      background-color: transparent;
+      border: 3px solid;
+      border-image: linear-gradient(-45deg,
+              v.$color-border-gradient-1 47%,
+              v.$color-border-gradient-2 97%) 1;
+      padding: 31px 0 29px;
+
+      &:hover{
+        backdrop-filter: blur(212px);
+        box-shadow: 0 4px 107px 0 v.$color-box-shadow;
+      }
+
+      &.active{
+        opacity: 1;
+        background: linear-gradient(130deg,
+                v.$color-gradient-4 18.31%,
+                v.$color-gradient-3 43.26%,
+                v.$color-gradient-1 85.44%,
+                v.$color-gradient-2 100%);
+      }
+
+      @include m.respond(tablet){
+        &:hover{
+          backdrop-filter: none;
+          box-shadow: none;
+        }
+      }
+
+      @include m.respond(mobile){
+        &:hover{
+          backdrop-filter: none;
+          box-shadow: none;
+        }
+     }
+    }
+  }
+
+  &__btn-view{
+    font-size: v.$font-size-full-m;
+    text-align: right;
+    margin: 32px 0 0 auto;
+  }
+
+  &__inner_accounts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__swiper-accounts{
+    max-width: 1384px;
+    width: 100%;
+  }
+
+  &__accounts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 438px;
+    font-family: v.$font-family-second;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 100%),
+            url("../../assets/img/section2-explore-collections/bg_photo.webp") top center / contain no-repeat;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 3px solid;
+    border-image:linear-gradient(45deg,
+            rgba(255, 255, 255, 0.24) 0%,
+            rgba(255, 255, 255, 0.28) 100%) 1;
+    padding: 101px 39px 40px;
+  }
+
+  &__avatar{
+    max-width: 163px;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  &__name{
+    font-size: v.$font-size-mobile-title-xs;
+    font-weight: v.$font-weight-medium;
+    line-height: 1.89;
+  }
+
+  &__nickname{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    color: v.$color-text-2;
+    margin-bottom: 7px;
+
+    img{
+      max-width: 16px;
+    }
+  }
+
+  &__statistic{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__info-number{
+    font-size: v.$font-size-mobile-title-m;
+    font-weight: v.$font-weight-semi-bold;
+    line-height: 2;
+  }
+
+  &__info-description{
+    font-size: v.$font-size-full-m;
+    font-weight: v.$font-weight-medium;
+    line-height: 3.2;
+    opacity: 0.7;
+    margin: -22px 0 26px;
+  }
+
+  &__btn-follow{
+    width: 65.27%;
+    font-size: v.$font-size-full-m;
+    font-weight: v.$font-weight-medium;
+    padding: 11px 0;
+  }
+
+
+}

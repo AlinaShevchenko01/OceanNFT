@@ -1,0 +1,26 @@
+@use "../variables/variables" as v;
+@use "../variables/mixins" as m;
+
+.top-nft{
+  &__wrapper{
+    max-width: 1448px;
+    margin: 0 auto;
+    padding: 216px 32px 0;
+  }
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 47px;
+  }
+
+  &__swiper{
+    max-width: 1384px;
+
+  }
+
+  &__img{
+    max-width: 100%;
+
+  }
+}
