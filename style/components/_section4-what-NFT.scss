@@ -2,7 +2,7 @@
 @use "../variables/mixins" as m;
 
 .what-NFT{
-  background-image: url("../../assets/img/section4-What-NFT/section4-bg1.png");
+  background-image: url("/OceanNFT/assets/img/section4-What-NFT/section4-bg1.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 556px;
@@ -12,7 +12,6 @@
 
   }
 
-
   &__wrapper{
     max-width: 1400px;
     font-family: v.$font-family-third;
@@ -20,7 +19,6 @@
     font-kerning: normal;
     padding: 218px 37px 160px 6px;
     margin: 0 auto;
-
 
     @include m.respond(mobile){
       max-width: 375px;
