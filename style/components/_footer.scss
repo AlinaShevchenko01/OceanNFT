@@ -1,2 +1,132 @@
 @use "../variables/variables" as v;
 @use "../variables/mixins" as m;
+
+.footer{
+  &__wrapper{
+    max-width: 1504px;
+    font-family: v.$font-family-third;
+    font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
+    color: v.$color-footer-2;
+    padding: 0 32px 40px 83px;
+  }
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    border-top: 2px solid v.$color-footer-border;
+
+    &:first-of-type{
+      padding: 101px 0 86px;
+    }
+
+    &:last-of-type{
+      font-size: v.$font-size-mobile-xl;
+      padding-top: 26px;
+    }
+  }
+
+  &__inner{
+
+    &:first-of-type{
+      flex: 0 1 20.3%;
+    }
+
+    &:last-of-type{
+      flex: 0 1 73.21%;
+    }
+  }
+
+  &__logo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: v.$font-size-full-m;
+    color: v.$color-text;
+    margin-bottom: 31px;
+
+    svg{
+      fill: none;
+      background: linear-gradient(130deg,
+              v.$color-gradient-4 18.31%,
+              v.$color-gradient-3 43.26%,
+              v.$color-gradient-1 85.44%,
+              v.$color-gradient-2 100%);
+      -webkit-mask: url('../../assets/svg/ETH.svg');
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: contain;
+      mask: url('../../assets/svg/ETH.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+    }
+  }
+
+  &__social-list{
+    max-width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 17px;
+    fill: v.$color-text;
+  }
+
+
+
+  &__text{
+    font-size: v.$font-size-mobile-l;
+    line-height: 1.71;
+    margin-bottom: 27px;
+
+  }
+
+  &__big-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 38px;
+  }
+
+  &__list{
+    flex: 1 1 176px;
+    font-size: v.$font-size-full-xs;
+    font-weight: v.$font-weight-medium;
+    color: v.$color-text;
+
+
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      gap:13px;
+      font-size: v.$font-size-mobile-l;
+      color: v.$color-footer-2;
+      line-height: 1.71;
+      margin-top: 24px;
+
+      span{
+        font-family: v.$font-family-eighth;
+        font-size: v.$font-size-tablet-xxl;
+        color: v.$color-footer;
+        margin-left: 9px;
+
+      }
+    }
+  }
+
+  &__conditions{
+    display: flex;
+    gap: 8px;
+
+    li{
+      border-right: 2px solid v.$color-footer-2;
+      padding-right: 9px;
+
+      &:last-of-type{
+        border-right: none;
+        padding-right: 4px;
+      }
+    }
+
+  }
+}
