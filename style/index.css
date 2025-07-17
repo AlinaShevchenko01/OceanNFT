@@ -2070,7 +2070,7 @@ h2 {
   align-items: center;
   max-width: 438px;
   font-family: "Rajdhani", sans-serif;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), url("../../assets/img/section2-explore-collections/bg_photo.webp") top center/contain no-repeat;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), url("/OceanNFT/assets/img/section2-explore-collections/bg_photo.webp") top center/contain no-repeat;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border: 3px solid;
