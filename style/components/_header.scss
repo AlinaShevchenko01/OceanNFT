@@ -2,30 +2,62 @@
 @use "../variables/mixins" as m;
 
 .header{
+
   &__fixed{
-    //position: fixed;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 10;
+    transition: background 300ms ease;
+
+    &.scrolled{
+      background: v.$color-header-bgc;
+      backdrop-filter: blur(100px);
+      -webkit-backdrop-filter: blur(100px);
+    }
   }
 
   &__wrapper{
     max-width: 1458px;
     display: flex;
     justify-content: space-between;
-    gap: 100px;
     align-items: center;
-    padding: 50px 32px 0;
+    gap: 40px;
+    padding: 50px 32px 30px;
     margin: 0 auto;
+
+    @include m.respond(tablet){
+      max-width: 768px;
+      padding: 24px 29px 12px 23px;
+    }
+
+    @include m.respond(mobile){
+      max-width: 375px;
+      padding: 24px 29px 12px 23px;
+    }
   }
 
   &__container{
     &:first-of-type{
+      flex: 1 0 9.5%;
+
+      @include m.respond(tablet){
+        flex: 1 1 29.86%;
+      }
 
     }
 
     &:last-of-type{
-      flex: 1 1 calc(88.55% - 212px);
-      max-width: calc(88.55% - 212px);
+      flex: 1 1 73.6%;
+      max-width: 73.6%;
 
+      @include m.respond(tablet){
+        flex: 0 0 0;
+      }
+
+      @include m.respond(mobile){
+        flex: 0 0 0;
+      }
     }
   }
 
@@ -49,11 +81,23 @@
   }
 
   &__logo{
+    width: 100%;
     display: flex;
     align-items: center;
     font-family: v.$font-family-primary;
     font-size: v.$font-size-full-m;
     font-weight: v.$font-weight-bold;
+    padding-left: 10px;
+
+    @include m.respond(tablet){
+      gap: 3px;
+      font-size: v.$font-size-full-xxs;
+    }
+
+    @include m.respond(mobile){
+      gap: 3px;
+      font-size: v.$font-size-full-xxs;
+    }
 
     span{
       opacity: 0.6;
@@ -64,38 +108,93 @@
   &__full-screen{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    @include m.respond(tablet){
+      display: none;
+    }
+
+    @include m.respond(mobile){
+      display: none;
+    }
   }
 
   &__inner{
+    &:first-of-type{
+      flex: 0 1 44.83%;
+
+    }
+
     &:last-of-type{
+      flex: 0 1 9.06%;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       gap: 40px;
 
       svg{
-        fill: v.$color-text
+        fill: v.$color-text;
       }
     }
   }
 
   &__navigation{
+
     ul{
+      max-width: 100%;
       display: flex;
       justify-content: space-between;
-      gap: 66px;
+      align-items: center;
+      gap: 32px;
       font-family: v.$font-family-primary;
       font-size: v.$font-size-full-m;
       font-weight: v.$font-weight-bold;
+      letter-spacing: 0.025em;
+
+
+      &:last-of-type{
+        padding-right: 19px;
+
+        @include m.respond(tablet){
+          align-items: flex-end;
+          padding-right: 0;
+        }
+
+        @include m.respond(mobile){
+          align-items: flex-end;
+          padding-right: 0;
+        }
+       }
+    }
+
+    a{
       opacity: 0.6;
+
+      &:hover{
+        opacity: 1;
+
+        @include m.respond(tablet){
+          opacity: 0.6;
+        }
+
+        @include m.respond(mobile){
+          opacity: 0.6;
+        }
+      }
     }
   }
 
-
+  &__account{
+    padding-right: 12px;
+  }
 
  &__burger{
+   position: relative;
    display: none;
 
    @include m.respond(tablet){
+
      display: block;
    }
 
@@ -103,7 +202,53 @@
      display: block;
    }
 
+   svg{
+     fill: v.$color-text;
+
+     &:active{
+       fill: v.$color-text-2;
+     }
+   }
  }
+
+  &__side-menu{
+
+  }
+
+  &__navigation_side-menu{
+    position: absolute;
+    top: 180%;
+    right: -130%;
+    transform: translateX(300%);
+    transition: transform 800ms ease;
+    pointer-events: none;
+    background: v.$color-header-bgc;
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    z-index: 10;
+    padding: 0 48px 24px 12px;
+
+    &.active{
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+
+    ul{
+      flex-direction: column;
+      gap: 16px;
+      font-size: v.$font-size-mobile-s;
+      padding-top: 16px;
+    }
+
+    a{
+      opacity: 1;
+      &:active{
+        color: v.$color-text-2;
+      }
+    }
+
+  }
+
 
 
 }

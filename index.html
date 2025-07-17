@@ -7,14 +7,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:opsz,wght@14..32,400&family=League+Spartan:wght@600&family=Orbitron:wght@700&family=Rajdhani:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=MuseoModerno&family=Orbitron:wght@700&family=Rajdhani:wght@400;500;600;700&family=Roboto:wght@100..900&display=swap"
         rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/spartan" rel="stylesheet">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
   <title>Ocean NFT</title>
   <link rel="icon"
         type="image/svg"
-        href="assets/svg/sprite/sprite.svg#icon-ETH">
+        href="assets/svg/ETH.svg">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -65,7 +69,7 @@
         <div class="header__full-screen">
           <div class="header__inner">
             <nav class="header__navigation">
-              <ul>
+              <ul class="header__nav-list">
                 <li>
                   <a href="#top-nft">
                     Market
@@ -105,10 +109,35 @@
         </div>
 
         <div class="header__burger">
-          <svg width="22px"
+          <svg class="header__burger-icon" width="22px"
                height="21px">
             <use href="assets/svg/sprite/sprite.svg#icon-burger"></use>
           </svg>
+
+          <div class="header__side-menu">
+            <nav class="header__navigation header__navigation_side-menu">
+              <ul class="header__nav-list">
+                <li>
+                  <a href="#top-nft">
+                    Market
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#collection">
+                    Features
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#top-sellers">
+                    Community
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
         </div>
       </div>
     </div>
@@ -134,9 +163,9 @@
 
           <div class="hero__inner">
             <button class="hero__btn btn-gradient">
-              <span>
-                Explore
-              </span>
+             <span>
+               Explore
+             </span>
 
               <svg class="hero__arrow"
                    width="52px"
@@ -180,9 +209,38 @@
           </div>
         </div>
 
+        <div class="hero__icons hero__icons_mobile">
+          <div class="hero__icons-wrapper">
+            <svg class="hero__coin-icon"
+                 width="143px"
+                 height="29px">
+              <use href="assets/svg/sprite/sprite.svg#icon-Binance_logo"></use>
+            </svg>
+
+            <svg class="hero__coin-icon"
+                 width="132px"
+                 height="29px">
+              <use href="assets/svg/sprite/sprite.svg#icon-Ethereum_logo"></use>
+            </svg>
+
+            <svg class="hero__coin-icon"
+                 width="166px"
+                 height="29px">
+              <use href="assets/svg/sprite/sprite.svg#icon-Blockchain_logo"></use>
+            </svg>
+
+            <svg class="hero__coin-icon"
+                 width="106px"
+                 height="17px">
+              <use href="assets/svg/sprite/sprite.svg#icon-bitmex"></use>
+            </svg>
+          </div>
+
+        </div>
+
         <div class="hero__column">
           <img class="hero__card-fon"
-                  src="assets/img/hero/hero_photo1.webp" alt="істота в масці">
+               src="assets/img/hero/hero_photo1.webp" alt="істота в масці">
 
           <div class="hero__cards cards">
             <div class="cards__wrapper">
@@ -192,7 +250,8 @@
                 </h6>
 
                 <div class="cards__customer">
-                  <img src="assets/img/section1-TOP-nft/section1-ava1.webp"
+                  <img class="cards__customer-ava"
+                          src="assets/img/section1-TOP-nft/section1-ava1.webp"
                        alt="customer">
 
                   <p class="cards__name">
@@ -221,7 +280,6 @@
                     ($29,8846)
                   </p>
                 </div>
-
               </div>
 
               <div class="cards__column">
@@ -262,14 +320,14 @@
                 </div>
 
                 <button class="cards__btn btn-gradient">
-                <span>
-                  Place Bid
-                </span>
+                 <span>
+                 Place Bid
+                  </span>
 
-                  <svg    width="24px"
-                          height="9px">
-                    <use href="assets/svg/sprite/sprite.svg#icon-arrow"></use>
-                  </svg>
+                 <svg    width="24px"
+                         height="9px">
+                   <use href="assets/svg/sprite/sprite.svg#icon-arrow"></use>
+                 </svg>
                 </button>
               </div>
             </div>
@@ -277,30 +335,32 @@
         </div>
       </div>
 
-      <div class="hero__container">
-        <svg class="hero__coin-icon"
-             width="266px"
-             height="54px">
-          <use href="assets/svg/sprite/sprite.svg#icon-Binance_logo"></use>
-        </svg>
+      <div class="hero__container hero__icons hero__icons_full">
+        <div class="hero__icons-wrapper">
+          <svg class="hero__coin-icon"
+               width="266px"
+               height="54px">
+            <use href="assets/svg/sprite/sprite.svg#icon-Binance_logo"></use>
+          </svg>
 
-        <svg class="hero__coin-icon"
-             width="171px"
-             height="54px">
-          <use href="assets/svg/sprite/sprite.svg#icon-Ethereum_logo"></use>
-        </svg>
+          <svg class="hero__coin-icon"
+               width="171px"
+               height="54px">
+            <use href="assets/svg/sprite/sprite.svg#icon-Ethereum_logo"></use>
+          </svg>
 
-        <svg class="hero__coin-icon"
-             width="350px"
-             height="54px">
-          <use href="assets/svg/sprite/sprite.svg#icon-Blockchain_logo"></use>
-        </svg>
+          <svg class="hero__coin-icon"
+               width="350px"
+               height="54px">
+            <use href="assets/svg/sprite/sprite.svg#icon-Blockchain_logo"></use>
+          </svg>
 
-        <svg class="hero__coin-icon"
-             width="196px"
-             height="31px">
-          <use href="assets/svg/sprite/sprite.svg#icon-bitmex"></use>
-        </svg>
+          <svg class="hero__coin-icon"
+               width="196px"
+               height="31px">
+            <use href="assets/svg/sprite/sprite.svg#icon-bitmex"></use>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -313,14 +373,14 @@
         </h2>
 
         <button class="top-nft__btn btn-view">
-          <span>
-            View all
-          </span>
+         <span>
+           View all
+         </span>
 
-          <svg width="43px"
-               height="18px">
-            <use href="assets/svg/sprite/sprite.svg#icon-arrow"></use>
-          </svg>
+         <svg width="45px"
+              height="18px">
+           <use href="assets/svg/sprite/sprite.svg#icon-arrow"></use>
+         </svg>
         </button>
       </div>
 
@@ -338,14 +398,16 @@
                   </h6>
 
                   <div class="cards__customer">
-                    <img src="assets/img/section1-TOP-nft/section1-ava1.webp"
+                    <img class="cards__customer-ava"
+                            src="assets/img/section1-TOP-nft/section1-ava1.webp"
                          alt="customer">
 
                     <p class="cards__name">
                       @jhonartist
                     </p>
 
-                    <img src="assets/img/section1-TOP-nft/check_mark.webp" alt="check-mark">
+                    <img class="cards__check-mark"
+                            src="assets/img/section1-TOP-nft/check_mark.webp" alt="check-mark">
                   </div>
 
                   <p class="cards__text">
@@ -367,7 +429,6 @@
                       ($29,8846)
                     </p>
                   </div>
-
                 </div>
 
                 <div class="cards__column">
@@ -408,9 +469,9 @@
                   </div>
 
                   <button class="cards__btn btn-gradient">
-                <span>
-                  Place Bid
-                </span>
+                   <span>
+                    Place Bid
+                   </span>
 
                     <svg width="24px"
                          height="9px">
@@ -419,7 +480,6 @@
                   </button>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -435,14 +495,16 @@
                   </h6>
 
                   <div class="cards__customer">
-                    <img src="assets/img/section1-TOP-nft/section1-ava2.webp"
+                    <img class="cards__customer-ava"
+                            src="assets/img/section1-TOP-nft/section1-ava2.webp"
                          alt="customer">
 
                     <p class="cards__name">
                       @jhonartist
                     </p>
 
-                    <img src="assets/img/section1-TOP-nft/check_mark.webp" alt="check-mark">
+                    <img class="cards__check-mark"
+                            src="assets/img/section1-TOP-nft/check_mark.webp" alt="check-mark">
                   </div>
 
                   <p class="cards__text">
@@ -464,7 +526,6 @@
                       ($29,8846)
                     </p>
                   </div>
-
                 </div>
 
                 <div class="cards__column">
@@ -505,9 +566,9 @@
                   </div>
 
                   <button class="cards__btn btn-gradient">
-                <span>
-                  Place Bid
-                </span>
+                    <span>
+                      Place Bid
+                   </span>
 
                     <svg width="24px"
                          height="9px">
@@ -516,7 +577,6 @@
                   </button>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -532,14 +592,16 @@
                   </h6>
 
                   <div class="cards__customer">
-                    <img src="assets/img/section1-TOP-nft/section1-ava3.webp"
+                    <img  class="cards__customer-ava"
+                            src="assets/img/section1-TOP-nft/section1-ava3.webp"
                          alt="customer">
 
                     <p class="cards__name">
                       @jhonartist
                     </p>
 
-                    <img src="assets/img/section1-TOP-nft/check_mark.webp" alt="check-mark">
+                    <img class="cards__check-mark"
+                            src="assets/img/section1-TOP-nft/check_mark.webp" alt="check-mark">
                   </div>
 
                   <p class="cards__text">
@@ -561,7 +623,6 @@
                       ($29,8846)
                     </p>
                   </div>
-
                 </div>
 
                 <div class="cards__column">
@@ -602,9 +663,9 @@
                   </div>
 
                   <button class="cards__btn btn-gradient">
-                <span>
-                  Place Bid
-                </span>
+                    <span>
+                      Place Bid
+                    </span>
 
                     <svg width="24px"
                          height="9px">
@@ -613,7 +674,6 @@
                   </button>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -660,7 +720,6 @@
                       ($29,8846)
                     </p>
                   </div>
-
                 </div>
 
                 <div class="cards__column">
@@ -701,9 +760,9 @@
                   </div>
 
                   <button class="cards__btn btn-gradient">
-                <span>
-                  Place Bid
-                </span>
+                    <span>
+                      Place Bid
+                    </span>
 
                     <svg width="32px"
                          height="12px">
@@ -715,6 +774,18 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="top-nft__btn-explore btn-explore">
+        <span>
+          Explore
+        </span>
+
+        <svg width="28px"
+             height="9px">
+          <use href="assets/svg/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+
       </div>
     </div>
   </section>
@@ -773,53 +844,51 @@
           </button>
         </div>
 
-        <div class="swiper collections__swiper-skins">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model1.webp" alt="skin for model">
-            </div>
+        <div class="collections__column">
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model1.webp" alt="skin for model">
+          </div>
 
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model2.webp" alt="skin for model">
-            </div>
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model2.webp" alt="skin for model">
+          </div>
 
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model3.webp" alt="skin for model">
-            </div>
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model3.webp" alt="skin for model">
+          </div>
 
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model4.webp" alt="skin for model">
-            </div>
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model4.webp" alt="skin for model">
+          </div>
 
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model5.webp" alt="skin for model">
-            </div>
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model5.webp" alt="skin for model">
+          </div>
 
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model6.webp" alt="skin for model">
-            </div>
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model6.webp" alt="skin for model">
+          </div>
 
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model7.webp" alt="skin for model">
-            </div>
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model7.webp" alt="skin for model">
+          </div>
 
-            <div class="swiper-slide collections__skins">
-              <img src="assets/img/section2-explore-collections/model8.webp" alt="skin for model">
-            </div>
+          <div class="collections__skin">
+            <img src="assets/img/section2-explore-collections/model8.webp" alt="skin for model">
           </div>
         </div>
       </div>
 
       <div class="collections__container">
         <div  class="collections__inner collections__inner_accounts">
-          <h2 class="collections__title">
+          <h2 class="collections__title_accounts">
             Explore Collections
           </h2>
 
           <button class="collections__btn-all btn-view">
-            <span>
-              View all
-            </span>
+        <span>
+          View all
+        </span>
 
             <svg width="43px"
                  height="16px">
@@ -828,11 +897,11 @@
           </button>
         </div>
 
-        <div class="swiper collections__swiper-accounts">
+        <div class="collections__swiper-accounts">
           <div class="swiper-wrapper">
             <div class="swiper-slide collections__accounts">
               <img class="collections__avatar"
-                      src="assets/img/section2-explore-collections/avatar1.webp" alt="account1">
+                   src="assets/img/section2-explore-collections/avatar1.webp" alt="account1">
               <p class="collections__name">
                 Jhones Nickey
               </p>
@@ -884,7 +953,7 @@
 
             <div class="swiper-slide collections__accounts">
               <img class="collections__avatar"
-                      src="assets/img/section2-explore-collections/avatar2.webp" alt="account2">
+                   src="assets/img/section2-explore-collections/avatar2.webp" alt="account2">
               <p class="collections__name">
                 Cody Fisher
               </p>
@@ -936,7 +1005,7 @@
 
             <div class="swiper-slide collections__accounts">
               <img class="collections__avatar"
-                      src="assets/img/section2-explore-collections/avatar3.webp" alt="account3">
+                   src="assets/img/section2-explore-collections/avatar3.webp" alt="account3">
               <p class="collections__name">
                 Jerome Bell
               </p>
@@ -988,10 +1057,10 @@
 
             <div class="swiper-slide collections__accounts">
               <img class="collections__avatar"
-                      src="assets/img/section2-explore-collections/avatar2.webp" alt="account4">
+                   src="assets/img/section2-explore-collections/avatar2.webp" alt="account4">
 
               <p class="collections__name">
-                 Johnessa Jackson
+                Johnessa Jackson
               </p>
 
               <div class="collections__nickname">
@@ -1040,6 +1109,17 @@
             </div>
           </div>
         </div>
+
+        <div class="collections__btn-explore btn-explore">
+        <span>
+          Explore
+        </span>
+
+          <svg width="28px"
+               height="9px">
+            <use href="assets/svg/sprite/sprite.svg#icon-arrow"></use>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -1047,13 +1127,14 @@
   <section class="top-sellers">
     <div class="top-sellers__wrapper">
       <h2 class="top-sellers__title">
-          Top Sellers this
+        Top Sellers this
 
         <span>
-          Month
-        </span>
+      Month
+    </span>
 
-        <svg width="13px"
+        <svg class="top-sellers__show-more"
+                width="13px"
              height="8px">
           <use href="assets/svg/sprite/sprite.svg#icon-spoiler"></use>
         </svg>
@@ -1067,28 +1148,28 @@
       <div class="top-sellers__cards">
         <div class="top-sellers__card">
           <p class="top-sellers__position">
-              1
-            </p>
+            1
+          </p>
 
           <img  class="top-sellers__avatar"
-                  src="assets/img/section3-Top-sellers/avatar1.webp" alt="avatar">
+                src="assets/img/section3-Top-sellers/avatar1.webp" alt="avatar">
 
           <div class="top-sellers__info">
-              <p class="top-sellers__name">
-                Eleanor Pena
+            <p class="top-sellers__name">
+              Eleanor Pena
+            </p>
+
+            <div class="top-sellers__coins">
+              <svg width="9px"
+                   height="15px">
+                <use href="assets/svg/sprite/sprite.svg#icon-ETH"></use>
+              </svg>
+
+              <p>
+                74875
               </p>
-
-              <div class="top-sellers__coins">
-                <svg width="9px"
-                     height="15px">
-                  <use href="assets/svg/sprite/sprite.svg#icon-ETH"></use>
-                </svg>
-
-                <p>
-                  74875
-                </p>
-              </div>
             </div>
+          </div>
 
           <p class="top-sellers__percent">
             +468.48%
@@ -1429,351 +1510,100 @@
       <button class="top-sellers__btn btn-gradient">
         Explore all
       </button>
+
+      <div class="top-sellers__btn-explore btn-explore">
+        <span>
+          Explore
+        </span>
+
+        <svg width="28px"
+             height="9px">
+          <use href="assets/svg/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+      </div>
     </div>
   </section>
 
   <section class="what-NFT">
     <div class="what-NFT__wrapper">
-      <div class="what-NFT__info-about">
-        <h3 class="what-NFT__title">
-          What are NFT’s ?
-        </h3>
+      <div class="what-NFT__gradient-border">
+        <div class="what-NFT__info-about">
+          <h3 class="what-NFT__title">
+            What are NFT’s ?
+          </h3>
 
-        <p class="what-NFT__text">
-          Lorem ipsum dolor sit amet, consectetur<br>
-          adipiscing elit. Interdum quis amet, faucibus<br>
-          lorem. Lectus amet odio quis sed adipiscing<br>
-          adipiscing magna non. Nullam turpis faucibus<br>
-          ridiculus suscipit. Et blandit suspendisse <br>
-          curabitur eu congue dui ut.
-        </p>
-
-        <div class="what-NFT__more">
-          <p>
-            Learn more
+          <p class="what-NFT__text">
+            Lorem ipsum dolor sit amet, consectetur<br>
+            adipiscing elit. Interdum quis amet, faucibus<br>
+            lorem. Lectus amet odio quis sed adipiscing<br>
+            adipiscing magna non. Nullam turpis faucibus<br>
+            ridiculus suscipit. Et blandit suspendisse <br>
+            curabitur eu congue dui ut.
           </p>
 
-          <button>
-            <svg width="13px"
-                 height="19px">
-              <use href="assets/svg/sprite/sprite.svg#icon-play"></use>
-            </svg>
+          <div class="what-NFT__more">
+            <p>
+              Learn more
+            </p>
 
-            <span>
-              Watch video
-            </span>
-          </button>
+            <button>
+              <svg width="13px"
+                   height="19px">
+                <use href="assets/svg/sprite/sprite.svg#icon-play"></use>
+              </svg>
+
+              <span>
+          Watch video
+        </span>
+            </button>
+          </div>
         </div>
       </div>
 
       <div class="what-NFT__container">
-        <img src="assets/img/section4-What-NFT/section4-bg2.png" alt="picture">
+        <img src="assets/img/section4-What-NFT/section4-bg2.png"
+             alt="picture">
 
-        <div class="what-NFT__subscribe">
-          <h4>
-            Subscribe to us
-          </h4>
+        <div class="what-NFT__inner">
+          <div class="what-NFT__subscribe">
+            <h4>
+              Subscribe to us
+            </h4>
 
-          <p class="what-NFT__text what-NFT__text_subscribe">
-            Specially developed to help restore a more youthful appearance with improved radiance and bounce.
-          </p>
+            <p class="what-NFT__text what-NFT__text_subscribe">
+              Specially developed to help restore a more youthful appearance
+              with improved radiance and bounce.
+            </p>
+          </div>
+
+          <form class="what-NFT__form">
+            <label for="email"></label>
+            <input class="what-NFT__email"
+                   type="email"
+                   name="email"
+                   id="email"
+                   placeholder="Your work email address">
+
+            <button class="what-NFT__form-btn btn-gradient">
+              Subscribe
+            </button>
+          </form>
         </div>
-
-        <form class="what-NFT__form">
-          <label for="email"></label>
-          <input class="what-NFT__email"
-                 type="email"
-                 name="email"
-                 id="email"
-                 placeholder="Your work email address">
-
-          <button class="what-NFT__form-btn btn-gradient"
-                  type="submit">
-            Subscribe
-          </button>
-        </form>
       </div>
     </div>
+
+
+
 
   </section>
+
+
 </main>
 
-<footer class="footer">
-  <div class="footer__wrapper">
-    <div class="footer__container">
-      <div class="footer__inner">
-        <h2 class="footer__logo">
-          <svg width="18px"
-               height="28px">
-            <use href="assets/svg/sprite/sprite.svg#icon-ETH"></use>
-          </svg>
-
-          <span>
-            OceanNFT
-          </span>
-        </h2>
-
-        <p class="footer__text">
-          Lorem ipsum dolor amet, consectetur<br>
-          adipiscing elit. Eget nisl nunc quam ac<br>
-          sed turpis volutpat. Cursus sed<br>
-          massa non nisi, placerat.
-        </p>
-
-        <ul class="footer__social-list">
-          <li>
-            <a target="_blank">
-              <svg width="28px"
-                   height="28px">
-                <use href="assets/svg/sprite/sprite.svg#icon-inst"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a target="_blank">
-              <svg width="28px"
-                   height="28px">
-                <use href="assets/svg/sprite/sprite.svg#icon-Social_Icon"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a target="_blank">
-              <svg width="28px"
-                   height="28px">
-                <use href="assets/svg/sprite/sprite.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a target="_blank"
-                href="#">
-              <svg width="28px"
-                   height="28px">
-                <use href="assets/svg/sprite/sprite.svg#icon-youtube"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__inner">
-      <ul class="footer__big-list">
-        <li class="footer__market-place">
-          Market place
-          <ul>
-            <li>
-              <a target="_blank">
-                Overview
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Features
-
-                <span>
-                new
-              </span>
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Tutorials
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Pricing
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Releases
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="footer__collectibles">
-          Collectibles
-          <ul>
-            <li>
-              <a target="_blank">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Press
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Careers
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Contact
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Partners
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="footer__support">
-          Support
-          <ul>
-            <li>
-              <a target="_blank">
-                Help Center
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Safety Center
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Legal
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Privacy policy
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Status
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="footer__legal">
-          Legal
-          <ul>
-            <li>
-              <a target="_blank">
-                Cookies Policy
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Privacy Policy
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Terms of Service
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Law Enforcement
-              </a>
-            </li>
-
-            <li>
-              <a  target="_blank">
-                Status
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="footer__follow">
-          Follow us
-          <ul>
-            <li>
-              <a target="_blank">
-                Facebook
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Twitter
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Dribbble
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                Instagram
-              </a>
-            </li>
-
-            <li>
-              <a target="_blank">
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer__container">
-      <p class="footer__develop">
-        © 2020 Landify UI Kit. All rights reserved
-      </p>
-
-      <ul class="footer__conditions">
-        <li>
-          <a>
-            Terms & Conditions
-          </a>
-        </li>
-
-        <li>
-          <a>
-            Privacy Policy
-          </a>
-        </li>
-
-        <li>
-          <a>
-            Sitemap
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
           crossorigin="anonymous"></script>
 

@@ -25,12 +25,21 @@ h1{
   font-weight: v.$font-weight-semi-bold;
   line-height: 1.37;
 
+
+  @include m.respond(laptop){
+    font-size: v.$font-size-full-xxxl;
+  }
+
   @include m.respond(tablet){
-    font-size: v.$font-size-mobile-title;
+    font-size: v.$font-size-mobile-title-l;
+    font-weight: v.$font-weight-bold;
+    line-height: 1.67;
   }
 
   @include m.respond(mobile){
-    font-size: v.$font-size-mobile-title;
+    font-size: v.$font-size-mobile-title-l;
+    font-weight: v.$font-weight-bold;
+    line-height: 1.67;
   }
 }
 
@@ -46,5 +55,4 @@ h2{
   @include m.respond(mobile){
     font-size: v.$font-size-full-xxs;
   }
-
 }
