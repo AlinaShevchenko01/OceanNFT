@@ -1275,7 +1275,7 @@ h2 {
   gap: 16px;
 }
 .hero__inner:first-of-type {
-  max-width: 436px;
+  max-width: 430px;
   margin-bottom: 64px;
 }
 @media (min-width: 769px) and (max-width: 1440px) {
@@ -1540,6 +1540,7 @@ h2 {
 }
 .hero__cards .cards__wrapper {
   max-width: 342px;
+  width: 342px;
   -webkit-mask-image: url("/OceanNFT/assets/img/hero/mask-for-card-customer.webp");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: top center;
@@ -2541,7 +2542,7 @@ h2 {
 }
 
 .what-NFT {
-  background-image: url("/OceanNFT/assets/img/section4-What-NFT/section4-bg1.png");
+  background-image: url("../../assets/img/section4-What-NFT/section4-bg1.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 556px;
@@ -2565,26 +2566,26 @@ h2 {
     padding: 0 24px;
   }
 }
-.what-NFT__gradient-border {
-  max-width: 583px;
-  margin: 0 0 0 auto;
-}
 @media (max-width: 375px) {
   .what-NFT__gradient-border {
-    margin: 121px auto;
+    padding-top: 121px;
   }
 }
 .what-NFT__info-about {
-  max-width: 577px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
-  padding: 58px 47px 50px 71px;
+  max-width: 583px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid;
+  border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.28) 100%) 1;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  padding: 58px 47px 50px 69px;
+  margin: 0 0 0 auto;
 }
 @media (max-width: 375px) {
   .what-NFT__info-about {
     max-width: 335px;
     padding: 34px 27px 29px 41px;
+    margin: 121px auto;
   }
 }
 .what-NFT__title {

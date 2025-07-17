@@ -165,7 +165,7 @@
     gap: 16px;
 
     &:first-of-type{
-      max-width: 436px;
+      max-width: 430px;
       margin-bottom: 64px;
 
       @include m.respond(laptop){
@@ -422,6 +422,7 @@
     
     .cards__wrapper{
       max-width: 342px;
+      width: 342px;
       -webkit-mask-image: url('/OceanNFT/assets/img/hero/mask-for-card-customer.webp');
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: top center;

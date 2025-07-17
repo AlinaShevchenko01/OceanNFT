@@ -12,6 +12,7 @@ window.addEventListener('scroll', (e) => {
 
 const burgerIcon = document.querySelector('.header__burger-icon')
 const burgerNavList = document.querySelector('.header__navigation_side-menu')
+/*
 burgerIcon.addEventListener('click', (e) => {
     burgerNavList.classList.toggle('active', !burgerNavList.classList.contains('active'));
 
@@ -23,6 +24,20 @@ burgerIcon.addEventListener('click', (e) => {
         document.body.style.paddingRight = ``;
     }
 });
+*/
+
+burgerIcon.addEventListener('click', (e) => {
+    burgerNavList.classList.toggle('active');
+});
+
+window.addEventListener('click', (e) => {
+    if (burgerNavList.classList.contains('active')) {
+        if (!burgerNavList.contains(e.target) &&
+            !burgerIcon.contains(e.target)) {
+            burgerNavList.classList.remove('active');
+        }
+    }
+})
 
 
 const burgerLinks = burgerNavList.querySelectorAll('li');

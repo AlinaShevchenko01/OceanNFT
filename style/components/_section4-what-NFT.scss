@@ -2,13 +2,14 @@
 @use "../variables/mixins" as m;
 
 .what-NFT{
-  background-image: url("/OceanNFT/assets/img/section4-What-NFT/section4-bg1.png");
+  background-image: url("../../assets/img/section4-What-NFT/section4-bg1.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 556px;
 
   @include m.respond(mobile){
     background-size: 100% 300px;
+
   }
 
 
@@ -28,24 +29,29 @@
   }
 
   &__gradient-border{
-    max-width: 583px;
-    margin: 0 0 0 auto;
+
 
     @include m.respond(mobile){
-      margin: 121px auto;
+      padding-top: 121px;
     }
   }
 
   &__info-about{
-    max-width: 577px;
-    background-color: v.$color-NFT-bgc;
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
-    padding: 58px 47px 50px 71px;
+    max-width: 583px;
+    background: v.$color-glass-effect-1;
+    border: 3px solid;
+    border-image:linear-gradient(45deg,
+            rgba(255, 255, 255, 0.24) 0%,
+            rgba(255, 255, 255, 0.28) 100%) 1;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    padding: 58px 47px 50px 69px;
+    margin: 0 0 0 auto;
 
     @include m.respond(mobile){
       max-width: 335px;
       padding: 34px 27px 29px 41px;
+      margin: 121px auto;
     }
   }
 
@@ -182,7 +188,7 @@
   }
 
   &__inner{
-     margin-top: 31px;
+    margin-top: 31px;
   }
 
   &__subscribe{
