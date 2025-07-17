@@ -21,7 +21,6 @@
       max-width: 375px;
       padding: 110px 30px 0;
     }
-
   }
 
   &__container{
@@ -208,11 +207,11 @@
     font-family: v.$font-family-primary;
     font-size: v.$font-size-full-m;
     font-weight: v.$font-weight-bold;
-    -webkit-mask-image: url('../../assets/svg/btn-mask.svg');
+    -webkit-mask-image: url('/OceanNFT/assets/svg/btn-mask.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: cover;
-    mask-image: url('../../assets/svg/btn-mask.svg');
+    mask-image: url('/OceanNFT/assets/svg/btn-mask.svg');
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
@@ -393,12 +392,12 @@
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25),
                0 4px 4px 0 rgba(0, 0, 0, 0.25),
                0 4px 4px 0 rgba(0, 0, 0, 0.25);
-   -webkit-mask-image: url('../../assets/img/hero/cards-mask.webp');
+   -webkit-mask-image: url('/OceanNFT/assets/img/hero/cards-mask.webp');
    -webkit-mask-repeat: no-repeat;
    -webkit-mask-position: center;
    -webkit-mask-size: cover;
 
-   mask-image: url('../../assets/img/hero/cards-mask.webp');
+   mask-image: url('/OceanNFT/assets/img/hero/cards-mask.webp');
    mask-repeat: no-repeat;
    mask-position: center;
    mask-size: cover;
@@ -423,11 +422,11 @@
     
     .cards__wrapper{
       max-width: 342px;
-      -webkit-mask-image: url('../../assets/img/hero/mask-for-card-customer.webp');
+      -webkit-mask-image: url('/OceanNFT/assets/img/hero/mask-for-card-customer.webp');
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: top center;
       -webkit-mask-size: cover;
-      mask-image: url('../../assets/img/hero/mask-for-card-customer.webp');
+      mask-image: url('/OceanNFT/assets/img/hero/mask-for-card-customer.webp');
       mask-repeat: no-repeat;
       mask-position: top center;
       mask-size: cover;

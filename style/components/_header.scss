@@ -70,11 +70,11 @@
             v.$color-gradient-3 43.26%,
             v.$color-gradient-1 85.44%,
             v.$color-gradient-2 100%);
-    -webkit-mask: url('../../assets/svg/ETH.svg');
+    -webkit-mask: url('/OceanNFT/assets/svg/ETH.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
-    mask: url('../../assets/svg/ETH.svg');
+    mask: url('/OceanNFT/assets/svg/ETH.svg');
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -246,11 +246,7 @@
         color: v.$color-text-2;
       }
     }
-
   }
-
-
-
 }
 
 
