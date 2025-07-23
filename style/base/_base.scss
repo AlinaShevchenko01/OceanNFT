@@ -1,58 +1,58 @@
-@use "../variables/variables" as v;
-@use "../variables/mixins" as m;
+@use "../variables/variables" as variables;
+@use "../variables/mixins" as mixins;
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body{
-  background-image: url("../../assets/img/hero/pages-bgc.webp");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: v.$color-text;
-
+  background-color: variables.$color-bg-main;
+  color: variables.$color-text;
 }
 
 a{
   text-decoration: none;
-  color: v.$color-text;
+  color: variables.$color-text;
 }
 
 h1{
-  font-family: v.$font-family-fifth;
-  font-size: v.$font-size-full-title;
-  font-weight: v.$font-weight-semi-bold;
+  font-family: variables.$font-family-fifth;
+  font-size: variables.$font-size-full-title;
+  font-weight: variables.$font-weight-semi-bold;
   line-height: 1.37;
 
-
-  @include m.respond(laptop){
-    font-size: v.$font-size-full-xxxl;
+  @include mixins.respond(laptop){
+    font-size: variables.$font-size-full-xxxl;
   }
 
-  @include m.respond(tablet){
-    font-size: v.$font-size-mobile-title-l;
-    font-weight: v.$font-weight-bold;
-    line-height: 1.67;
+  @include mixins.respond(tablet){
+    font-family: variables.$font-family-title-mobile;
+    font-size: variables.$font-size-mobile-title;
+    font-weight: variables.$font-weight-bold;
   }
 
-  @include m.respond(mobile){
-    font-size: v.$font-size-mobile-title-l;
-    font-weight: v.$font-weight-bold;
-    line-height: 1.67;
+  @include mixins.respond(mobile){
+    font-family: variables.$font-family-title-mobile;
+    font-size: variables.$font-size-mobile-title;
+    font-weight: variables.$font-weight-bold;
   }
 }
 
 h2{
-  font-family: v.$font-family-primary;
-  font-size: v.$font-size-full-xxl;
-  font-weight: v.$font-weight-bold;
+  font-family: variables.$font-family-primary;
+  font-size: variables.$font-size-full-xxl;
+  font-weight: variables.$font-weight-bold;
 
-  @include m.respond(tablet){
-    font-size: v.$font-size-full-xxs;
+  @include mixins.respond(tablet){
+    font-size: variables.$font-size-full-xxs;
   }
 
-  @include m.respond(mobile){
-    font-size: v.$font-size-full-xxs;
+  @include mixins.respond(mobile){
+    font-size: variables.$font-size-full-xxs;
   }
 }

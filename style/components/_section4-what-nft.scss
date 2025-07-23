@@ -1,0 +1,421 @@
+@use "../variables/variables" as variables;
+@use "../variables/mixins" as mixins;
+
+.what-NFT{
+  position: relative;
+  background-image: url("../../assets/img/section4-what-nft/section4-bg1.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 556px;
+
+  @include mixins.respond(laptop){
+    background-size: 100% 420px;
+  }
+
+  @include mixins.respond(tablet){
+    background-size: 100% 300px;
+  }
+
+  @include mixins.respond(mobile){
+    background-size: 100% 300px;
+  }
+
+  &__wrapper{
+    max-width: 1448px;
+    font-family: variables.$font-family-third;
+    font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
+    font-kerning: normal;
+    padding: 214px 6px 160px;
+    margin: 0 auto;
+
+    @include mixins.respond(laptop){
+      padding-top: 180px;
+    }
+
+    @include mixins.respond(tablet){
+      max-width: 375px;
+      padding: 121px 21px;
+    }
+
+    @include mixins.respond(mobile){
+      max-width: 375px;
+      padding: 121px 21px 108px;
+    }
+  }
+
+  &__info-about{
+    position: absolute;
+    right: 134px;
+    width: 583px;
+    background: variables.$color-glass-effect-1;
+    border: 3px solid;
+    border-image:linear-gradient(45deg,
+            rgba(255, 255, 255, 0.24) 0%,
+            rgba(255, 255, 255, 0.28) 100%) 1;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    padding: 56px 49px 46px 72px;
+
+    @include mixins.respond(laptop){
+    max-width: 440px;
+    padding: 40px;
+    }
+
+    @include mixins.respond(tablet){
+      right: auto;
+      max-width: 333px;
+      border: 2px solid;
+      border-image:linear-gradient(45deg,
+              rgba(255, 255, 255, 0.24) 0%,
+              rgba(255, 255, 255, 0.28) 100%) 1;
+      padding: 33px 26px 26px 37px;
+    }
+
+    @include mixins.respond(mobile){
+      right: auto;
+      max-width: 333px;
+      border: 2px solid;
+      border-image:linear-gradient(45deg,
+              rgba(255, 255, 255, 0.24) 0%,
+              rgba(255, 255, 255, 0.28) 100%) 1;
+      padding: 33px 26px 26px 37px;
+    }
+  }
+
+  &__title{
+    font-size: variables.$font-size-full-title-s;
+    font-weight: variables.$font-weight-extra-bold;
+    line-height: 1.35;
+    margin-bottom: 21px;
+
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-mobile-title-m;
+      margin-bottom: 16px;
+    }
+
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-title-s;
+      letter-spacing: 0.013em;
+      margin-bottom: 10px;
+    }
+
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-title-s;
+      letter-spacing: 0.013em;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text{
+    font-size: variables.$font-size-full-l;
+    font-weight: variables.$font-weight-regular;
+    line-height: 1.78;
+    margin-bottom: 44px;
+
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-full-xxs;
+      margin-bottom: 32px;
+    }
+
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-s;
+      letter-spacing: 0.028em;
+      line-height: 1.88;
+      margin-bottom: 26px;
+    }
+
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-s;
+      letter-spacing: 0.028em;
+      line-height: 1.88;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__more{
+    max-width: 276px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: variables.$font-size-full-xs;
+    font-weight: variables.$font-weight-medium;
+    line-height: 1.5;
+
+    @include mixins.respond(laptop){
+      max-width: 220px;
+      font-size: variables.$font-size-mobile-s;
+    }
+
+    @include mixins.respond(tablet){
+      max-width: 160px;
+      font-size: variables.$font-size-mobile-xs;
+    }
+
+    @include mixins.respond(mobile){
+      max-width: 160px;
+      font-size: variables.$font-size-mobile-xs;
+    }
+
+    button{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: variables.$font-family-third;
+      font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
+      font-size: variables.$font-size-full-xs;
+      font-weight: variables.$font-weight-medium;
+      color: variables.$color-text;
+      background-color: transparent;
+      line-height: 1.5;
+      border: none;
+
+      @include mixins.respond(laptop){
+        font-size: variables.$font-size-mobile-s;
+      }
+
+      @include mixins.respond(tablet){
+        gap: 5px;
+        font-size: variables.$font-size-mobile-xs;
+      }
+
+      @include mixins.respond(mobile){
+        gap: 5px;
+        font-size: variables.$font-size-mobile-xs;
+      }
+
+      svg{
+        fill: variables.$color-text;
+
+        @include mixins.respond(tablet){
+          width: 8px;
+          height: 11px;
+        }
+
+        @include mixins.respond(mobile){
+          width: 8px;
+          height: 11px;
+        }
+      }
+    }
+  }
+
+  &__container{
+    max-width: 1266px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 634px 0 0 30px;
+
+    @include mixins.respond(laptop){
+      margin-top: 480px;
+    }
+
+    @include mixins.respond(tablet){
+      gap: 0;
+      flex-direction: column-reverse;
+      margin: 350px 0 0 6px;
+    }
+
+    @include mixins.respond(mobile){
+      gap: 0;
+      flex-direction: column-reverse;
+      margin: 350px 0 0 6px;
+    }
+  }
+
+  &__background{
+    flex: 1 1 55.21%;
+    max-width: 55.21%;
+    border-radius: 4px;
+
+    @include mixins.respond(tablet){
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    @include mixins.respond(mobile){
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__background_full{
+    @include mixins.respond(tablet){
+      display: none;
+    }
+
+    @include mixins.respond(mobile){
+      display: none;
+    }
+  }
+
+  &__background_small{
+    display: none;
+
+    @include mixins.respond(tablet){
+      display: block;
+      max-width: 326px;
+      margin-top: 108px;
+    }
+
+    @include mixins.respond(mobile){
+      display: block;
+      max-width: 326px;
+      margin-top: 108px;
+    }
+  }
+
+  &__inner{
+    flex: 1 1 38.78%;
+    max-width: 38.78%;
+    margin-top: 36px;
+
+    @include mixins.respond(tablet){
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    @include mixins.respond(mobile){
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__subscribe{
+    h4{
+      font-family: variables.$font-family-primary;
+      font-size: variables.$font-size-full-xxxl;
+      font-weight: variables.$font-weight-bold;
+      margin-bottom: 36px;
+
+      @include mixins.respond(laptop){
+        font-size: variables.$font-size-mobile-title-m;
+        margin-bottom: 24px;
+      }
+
+      @include mixins.respond(tablet){
+        font-size: variables.$font-size-full-xxl;
+        margin-bottom: 18px;
+      }
+
+      @include mixins.respond(mobile){
+        font-size: variables.$font-size-full-xxl;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__text_subscribe{
+    font-size: variables.$font-size-full-m;
+    letter-spacing: 0.025em;
+    margin-bottom: 50px;
+
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-full-xxs;
+      margin-bottom: 40px;
+    }
+
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-l;
+      letter-spacing: 0;
+      margin-bottom: 32px;
+    }
+
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-l;
+      letter-spacing: 0;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__form{
+    max-width: 89%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 9px;
+    margin-left: -10px;
+
+    @include mixins.respond(tablet){
+      gap: 6px;
+      margin-left: -8px;
+    }
+
+    @include mixins.respond(mobile){
+      gap: 6px;
+      margin-left: -8px;
+    }
+  }
+
+  &__email{
+    flex: 1 1 274px;
+    max-width: 274px;
+    background-color: variables.$color-form-background;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    padding: 17px 0 18px 16px;
+
+    @include mixins.respond(tablet){
+      border-radius: 4px 0 0 4px;
+      padding: 6px 0 10px 11px;
+    }
+
+    @include mixins.respond(mobile){
+      flex: 0 1 181px;
+      max-width: 181px;
+      border-radius: 4px 0 0 4px;
+      padding: 6px 0 10px 11px;
+    }
+
+    &::placeholder{
+      font-family: variables.$font-family-third;
+      font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
+      font-size: variables.$font-size-mobile-xxl;
+      line-height: 1.71;
+      color: variables.$color-form-placeholder;
+
+      @include mixins.respond(tablet){
+        font-size: variables.$font-size-mobile-xs;
+      }
+
+      @include mixins.respond(mobile){
+        font-size: variables.$font-size-mobile-xs;
+      }
+    }
+  }
+
+  &__form-btn{
+    flex: 0 1 144px;
+    max-width: 144px;
+    border-radius: 0 6px 6px 0;
+    background: linear-gradient(-45deg,
+            variables.$color-border-gradient-1 47%,
+            variables.$color-border-gradient-2 97%);
+
+    @include mixins.respond(mobile){
+      flex: 0 1 97px;
+    }
+  }
+
+  &__form-btn-inner{
+    width: 100%;
+    text-align: center;
+    font-family: variables.$font-family-third;
+    font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
+    font-size: variables.$font-size-mobile-xxl;
+    font-weight: variables.$font-weight-medium;
+    line-height: 1.43;
+    padding: 12px 0 16px;
+    border-radius: 0 6px 6px 0;
+
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-xs;
+      padding: 7px 22px 10px;
+    }
+
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-xs;
+      padding: 7px 22px 10px;
+    }
+  }
+}

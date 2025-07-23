@@ -1,85 +1,79 @@
-@use "../variables/variables" as v;
-@use "../variables/mixins" as m;
+@use "../variables/variables" as variables;
+@use "../variables/mixins" as mixins;
+
+.no-scroll{
+  overflow: hidden;
+}
 
 .btn-gradient{
-  color: v.$color-text;
-  fill: v.$color-text;
-  background: linear-gradient(130deg,
-          v.$color-gradient-4 18.31%,
-          v.$color-gradient-3 43.26%,
-          v.$color-gradient-1 85.44%,
-          v.$color-gradient-2 100%);
-  box-shadow: 0 6px 140px 0 rgba(255, 86, 246, 0.51);
-  backdrop-filter: blur(276px);
-  -webkit-backdrop-filter: blur(276px);
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(45deg,
-          v.$color-border-gradient-1 47%,
-          v.$color-border-gradient-2 97%) 1;
-  transition: opacity 0.5s ease;
+  background: linear-gradient(45deg,
+          variables.$color-border-gradient-1 47%,
+          variables.$color-border-gradient-2 97%);
+  padding: 2px;
 
-  @include m.respond(mobile){
-    border: 1.7px solid;
-    border-image: linear-gradient(45deg,
-            v.$color-border-gradient-1 47%,
-            v.$color-border-gradient-2 97%) 1;
+  @include mixins.respond(tablet){
+    padding: 1.2px;
   }
 
-
-  @include m.respond(pc){
-    &:hover{
-      background: linear-gradient(-130deg,
-              v.$color-gradient-4 18.31%,
-              v.$color-gradient-3 43.26%,
-              v.$color-gradient-1 85.44%,
-              v.$color-gradient-2 100%);
-
-      border-image: linear-gradient(-45deg,
-              v.$color-border-gradient-1 47%,
-              v.$color-border-gradient-2 97%) 1;
-      opacity: 0.9;
-    }
-  }
-
-  @include m.respond(laptop){
-    &:hover{
-      background: linear-gradient(-130deg,
-              v.$color-gradient-4 18.31%,
-              v.$color-gradient-3 43.26%,
-              v.$color-gradient-1 85.44%,
-              v.$color-gradient-2 100%);
-      border-image: linear-gradient(-45deg,
-              v.$color-border-gradient-1 47%,
-              v.$color-border-gradient-2 97%) 1;
-      opacity: 0.9;
-    }
+  @include mixins.respond(tablet){
+    padding: 1.2px;
   }
 }
 
+.btn-gradient-inner{
+  color: variables.$color-text;
+  fill: variables.$color-text;
+  background: linear-gradient(130deg,
+          variables.$color-gradient-4 18.31%,
+          variables.$color-gradient-3 43.26%,
+          variables.$color-gradient-1 85.44%,
+          variables.$color-gradient-2 100%);
+  box-shadow: 0 6px 140px 0 rgba(255, 86, 246, 0.51);
+  backdrop-filter: blur(276px);
+  -webkit-backdrop-filter: blur(276px);
+  border: none;
+  transition: opacity 0.5s ease;
+
+  &:hover{
+    background: linear-gradient(-130deg,
+            variables.$color-gradient-4 18.31%,
+            variables.$color-gradient-3 43.26%,
+            variables.$color-gradient-1 85.44%,
+            variables.$color-gradient-2 100%);
+
+    @include mixins.respond(tablet){
+      background: linear-gradient(130deg,
+              variables.$color-gradient-4 18.31%,
+              variables.$color-gradient-3 43.26%,
+              variables.$color-gradient-1 85.44%,
+              variables.$color-gradient-2 100%);
+    }
+
+    @include mixins.respond(tablet){
+      background: linear-gradient(130deg,
+              variables.$color-gradient-4 18.31%,
+              variables.$color-gradient-3 43.26%,
+              variables.$color-gradient-1 85.44%,
+              variables.$color-gradient-2 100%);
+     }
+   }
+}
+
 .cards{
+
   &__wrapper{
     max-width: 438px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    font-family: v.$font-family-second;
-    background: linear-gradient(90deg,
-            v.$color-glass-effect-1 0%,
-            v.$color-border-gradient-5 100%);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    border: 3px solid;
-    border-image:linear-gradient(45deg,
-            rgba(255, 255, 255, 0.24) 0%,
-            rgba(255, 255, 255, 0.28) 100%) 1;
+    font-family: variables.$font-family-second;
     padding: 33px 21px 19px 27px;
 
-    @include m.respond(tablet){
+    @include mixins.respond(tablet){
       max-width: 100%;
     }
 
-    @include m.respond(mobile){
+    @include mixins.respond(mobile){
       max-width: 100%;
       border: 1.7px solid;
       border-image:linear-gradient(45deg,
@@ -98,21 +92,21 @@
   }
 
   &__title{
-    font-size: v.$font-size-full-xl;
-    font-weight: v.$font-weight-bold;
+    font-size: variables.$font-size-full-xl;
+    font-weight: variables.$font-weight-bold;
     line-height: 200%;
     margin-bottom: -2px;
 
-    @include m.respond(laptop){
-      font-size: v.$font-size-mobile-xxl;
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-mobile-xxl;
     }
 
-    @include m.respond(tablet){
-      font-size: v.$font-size-mobile-l;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-l;
     }
 
-    @include m.respond(mobile){
-      font-size: v.$font-size-mobile-l;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-l;
       margin-bottom: 8px;
     }
   }
@@ -123,7 +117,7 @@
     gap: 4px;
     margin-bottom: 10px;
 
-    @include m.respond(mobile){
+    @include mixins.respond(mobile){
       margin-bottom: 12px;
     }
   }
@@ -131,26 +125,26 @@
   &__customer-ava{
     max-width: 38px;
 
-    @include m.respond(mobile){
+    @include mixins.respond(mobile){
       max-width: 26px;
     }
   }
 
   &__name{
-    font-size: v.$font-size-full-l;
-    font-weight: v.$font-weight-semi-bold;
+    font-size: variables.$font-size-full-l;
+    font-weight: variables.$font-weight-semi-bold;
     line-height: 229%;
 
-    @include m.respond(laptop){
-      font-size: v.$font-size-mobile-l;
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-mobile-l;
     }
 
-    @include m.respond(tablet){
-      font-size: v.$font-size-mobile-s;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-s;
     }
 
-    @include m.respond(mobile){
-      font-size: v.$font-size-mobile-s;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-s;
       padding-right: 12px;
     }
   }
@@ -158,26 +152,25 @@
   &__check-mark{
     max-width: 16px;
 
-    @include m.respond(mobile){
+    @include mixins.respond(mobile){
       max-width: 11px;
-
     }
   }
 
   &__text{
-    font-size: v.$font-size-mobile-xl;
-    font-weight: v.$font-weight-semi-bold;
+    font-size: variables.$font-size-mobile-xl;
+    font-weight: variables.$font-weight-semi-bold;
     line-height: 3.2;
     opacity: 0.7;
     margin-bottom: -16px;
 
-    @include m.respond(tablet){
-      font-size: v.$font-size-mobile-xs;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-xs;
       margin-bottom: -4px;
     }
 
-    @include m.respond(mobile){
-      font-size: v.$font-size-mobile-xxxs;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-xxxs;
       margin-bottom: -4px;
     }
 
@@ -190,15 +183,15 @@
     display: flex;
     align-items: center;
     gap: 7px;
-    fill: v.$color-text;
+    fill: variables.$color-text;
 
     svg{
-      @include m.respond(tablet){
+      @include mixins.respond(tablet){
         width: 18px;
         height: 18px;
       }
 
-      @include m.respond(mobile){
+      @include mixins.respond(mobile){
         width: 16px;
         height: 18px;
       }
@@ -206,40 +199,40 @@
   }
 
   &__coin-name{
-    font-family: v.$font-family-primary;
-    font-size: v.$font-size-mobile-m;
-    font-weight: v.$font-weight-semi-bold;
+    font-family: variables.$font-family-primary;
+    font-size: variables.$font-size-mobile-m;
+    font-weight: variables.$font-weight-semi-bold;
 
-    @include m.respond(laptop){
-      font-size: v.$font-size-mobile-s;
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-mobile-s;
     }
 
-    @include m.respond(tablet){
-      font-size: v.$font-size-mobile-xs;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-xs;
     }
 
-    @include m.respond(mobile){
-      font-size: v.$font-size-mobile-xxxs;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-xxxs;
       gap:4px;
     }
   }
 
   &__coin-price{
-    font-size: v.$font-size-mobile-xl;
-    font-weight: v.$font-weight-regular;
+    font-size: variables.$font-size-mobile-xl;
+    font-weight: variables.$font-weight-regular;
     line-height: 320%;
     opacity: 0.7;
 
-    @include m.respond(laptop){
-      font-size: v.$font-size-mobile-s;
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-mobile-s;
     }
 
-    @include m.respond(tablet){
-      font-size: v.$font-size-mobile-xs;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-xs;
     }
 
-    @include m.respond(mobile){
-      font-size: v.$font-size-mobile-xxxs;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-xxxs;
     }
   }
 
@@ -251,96 +244,94 @@
     padding-left: 4px;
     margin-top: -12px;
 
-    @include m.respond(tablet){
+    @include mixins.respond(tablet){
       gap: 16px;
       margin-top: -2px;
     }
 
-    @include m.respond(mobile){
+    @include mixins.respond(mobile){
       gap: 16px;
       margin-top: -2px;
     }
   }
 
   &__timer-value{
-    font-size: v.$font-size-full-xl;
-    font-weight: v.$font-weight-semi-bold;
+    font-size: variables.$font-size-full-xl;
+    font-weight: variables.$font-weight-semi-bold;
     line-height: 2;
 
-    @include m.respond(laptop){
-      font-size: v.$font-size-full-m;
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-full-m;
     }
 
-    @include m.respond(tablet){
-      font-size: v.$font-size-mobile-xxl;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-xxl;
     }
 
-    @include m.respond(mobile){
-      font-size: v.$font-size-mobile-l;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-l;
     }
   }
 
   &__timer-description{
-    font-size: v.$font-size-mobile-xl;
-    font-weight: v.$font-weight-medium;
+    font-size: variables.$font-size-mobile-xl;
+    font-weight: variables.$font-weight-medium;
     line-height: 3.2;
     opacity: 0.7;
     margin: -22px 0 26px;
 
-    @include m.respond(laptop){
-      font-size: v.$font-size-mobile-l;
+    @include mixins.respond(laptop){
+      font-size: variables.$font-size-mobile-l;
     }
 
-    @include m.respond(tablet){
-      font-size: v.$font-size-mobile-s;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-s;
       margin: -12px 0 18px;
     }
 
-    @include m.respond(mobile){
-      font-size: v.$font-size-mobile-xxxs;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-xxxs;
       margin: -8px 0 18px;
     }
   }
 
   &__btn{
+    backdrop-filter: blur(180px);
+    -webkit-backdrop-filter: blur(180px);
+    box-shadow: 0 3px 82px 0 variables.$color-box-shadow;
+  }
+
+  &__btn-inner{
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    font-size: v.$font-size-full-xl;
-    font-weight: v.$font-weight-semi-bold;
+    font-family: variables.$font-family-second;
+    font-size: variables.$font-size-full-xl;
+    font-weight: variables.$font-weight-semi-bold;
     padding: 10px;
 
-    @include m.respond(laptop){
-      font-size: v.$font-size-mobile-xxl;
-    }
-
-    @include m.respond(tablet){
-      max-width: 112px;
-      font-size: v.$font-size-mobile-l;
+    @include mixins.respond(tablet){
+      font-size: variables.$font-size-mobile-l;
       gap: 4px;
       padding: 7px 9px 10px;
     }
 
-    @include m.respond(mobile){
-      width: 100%;
-      max-width: 112px;
-      font-size: v.$font-size-mobile-l;
-      gap: 4px;
-      padding: 7px 9px 10px;
+    @include mixins.respond(mobile){
+      font-size: variables.$font-size-mobile-l;
     }
 
     svg{
       width: 31px;
       height: 12px;
 
-      @include m.respond(tablet){
+      @include mixins.respond(tablet){
         width: 22px;
         height: 9px;
       }
 
-      @include m.respond(mobile){
+      @include mixins.respond(mobile){
         width: 22px;
         height: 9px;
       }
@@ -352,38 +343,38 @@
   display: flex;
   align-items: center;
   gap: 25px;
-  font-family: v.$font-family-primary;
-  font-size: v.$font-size-full-xxl;
-  font-weight: v.$font-weight-bold;
+  font-family: variables.$font-family-primary;
+  font-size: variables.$font-size-full-xxl;
+  font-weight: variables.$font-weight-bold;
   letter-spacing: 0.01em;
-  color: v.$color-text;
-  fill: v.$color-text;
+  color: variables.$color-text;
+  fill: variables.$color-text;
   border: none;
   background-color: transparent;
 
-  @include m.respond(pc){
+  @include mixins.respond(pc){
     &:hover{
       background: linear-gradient(312deg,
-              v.$color-gradient-5 0%,
-              v.$color-gradient-4 100%);
+              variables.$color-gradient-5 0%,
+              variables.$color-gradient-4 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      fill: v.$color-gradient-4;
+      fill: variables.$color-gradient-4;
     }
   }
 
-  @include m.respond(laptop){
+  @include mixins.respond(laptop){
     &:hover{
       background: linear-gradient(312deg,
-              v.$color-gradient-5 0%,
-              v.$color-gradient-4 100%);
+              variables.$color-gradient-5 0%,
+              variables.$color-gradient-4 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      fill: v.$color-gradient-4;
+      fill: variables.$color-gradient-4;
     }
   }
 }
@@ -391,27 +382,65 @@
 .btn-explore{
   display: none;
   max-width: 136px;
-  text-align: center;
-  font-family: v.$font-family-primary;
-  font-size: v.$font-size-mobile-m;
-  font-weight: v.$font-weight-extra-bold;
-  color: v.$color-text;
-  fill: v.$color-text;
-  border: 1.2px solid;
-  border-image: linear-gradient(45deg,
-          v.$color-border-gradient-1 47%,
-          v.$color-border-gradient-2 97%) 1;
-  padding: 9px 0 12px;
+  border-radius: 1px;
+  background: linear-gradient(45deg,
+          variables.$color-border-gradient-1 47%,
+          variables.$color-border-gradient-2 97%);
+  clip-path: polygon(17.985% 3.711%, 97.904% 3.711%, 97.904% 3.711%, 98.114% 3.772%,
+          98.313% 3.948%, 98.498% 4.231%, 98.667% 4.609%, 98.818% 5.075%, 98.947% 5.617%,
+          99.052% 6.228%, 99.13% 6.896%, 99.179% 7.612%, 99.196% 8.368%, 99.196% 69.725%,
+          99.196% 69.725%, 99.188% 70.253%, 99.164% 70.768%, 99.124% 71.266%, 99.069% 71.741%,
+          99% 72.191%, 98.918% 72.611%, 98.823% 72.997%, 98.717% 73.345%, 98.599% 73.65%,
+          98.472% 73.909%, 85.715% 96.374%, 85.715% 96.374%, 85.661% 96.463%, 85.607% 96.543%,
+          85.552% 96.614%, 85.496% 96.675%, 85.439% 96.727%, 85.382% 96.77%, 85.324% 96.804%,
+          85.266% 96.828%, 85.207% 96.842%, 85.148% 96.847%, 2.321% 96.847%, 2.321% 96.847%,
+          2.111% 96.786%, 1.913% 96.609%, 1.727% 96.327%, 1.558% 95.948%, 1.408% 95.483%,
+          1.279% 94.94%, 1.173% 94.33%, 1.095% 93.662%, 1.046% 92.946%, 1.029% 92.19%,
+          1.029% 35.13%, 1.029% 35.13%, 1.038% 34.595%, 1.063% 34.075%, 1.104% 33.573%,
+          1.159% 33.093%, 1.229% 32.64%, 1.313% 32.217%, 1.409% 31.83%, 1.518% 31.482%,
+          1.638% 31.178%, 1.768% 30.922%, 17.432% 4.16%, 17.432% 4.16%, 17.484% 4.075%,
+          17.537% 3.999%, 17.591% 3.932%, 17.646% 3.874%, 17.702% 3.824%, 17.757% 3.784%,
+          17.814% 3.752%, 17.871% 3.729%, 17.928% 3.715%, 17.985% 3.711%);
+  padding: 1.2px;
+  margin: 39px auto 0;
 
   span{
     padding-right: 4px;
   }
 
-  @include m.respond(tablet){
+  @include mixins.respond(tablet){
     display: block;
   }
 
-  @include m.respond(mobile){
+  @include mixins.respond(mobile){
     display: block;
   }
+}
+
+.btn-explore-inner{
+  width: 133px;
+  height: 34px;
+  text-align: center;
+  font-family: variables.$font-family-primary;
+  font-size: variables.$font-size-mobile-m;
+  font-weight: variables.$font-weight-extra-bold;
+  background: variables.$color-bg-main;
+  color: variables.$color-text;
+  fill: variables.$color-text;
+  clip-path: polygon(17.985% 3.711%, 97.904% 3.711%, 97.904% 3.711%, 98.114% 3.772%,
+          98.313% 3.948%, 98.498% 4.231%, 98.667% 4.609%, 98.818% 5.075%, 98.947% 5.617%,
+          99.052% 6.228%, 99.13% 6.896%, 99.179% 7.612%, 99.196% 8.368%, 99.196% 69.725%,
+          99.196% 69.725%, 99.188% 70.253%, 99.164% 70.768%, 99.124% 71.266%, 99.069% 71.741%,
+          99% 72.191%, 98.918% 72.611%, 98.823% 72.997%, 98.717% 73.345%, 98.599% 73.65%,
+          98.472% 73.909%, 85.715% 96.374%, 85.715% 96.374%, 85.661% 96.463%, 85.607% 96.543%,
+          85.552% 96.614%, 85.496% 96.675%, 85.439% 96.727%, 85.382% 96.77%, 85.324% 96.804%,
+          85.266% 96.828%, 85.207% 96.842%, 85.148% 96.847%, 2.321% 96.847%, 2.321% 96.847%,
+          2.111% 96.786%, 1.913% 96.609%, 1.727% 96.327%, 1.558% 95.948%, 1.408% 95.483%,
+          1.279% 94.94%, 1.173% 94.33%, 1.095% 93.662%, 1.046% 92.946%, 1.029% 92.19%,
+          1.029% 35.13%, 1.029% 35.13%, 1.038% 34.595%, 1.063% 34.075%, 1.104% 33.573%,
+          1.159% 33.093%, 1.229% 32.64%, 1.313% 32.217%, 1.409% 31.83%, 1.518% 31.482%,
+          1.638% 31.178%, 1.768% 30.922%, 17.432% 4.16%, 17.432% 4.16%, 17.484% 4.075%,
+          17.537% 3.999%, 17.591% 3.932%, 17.646% 3.874%, 17.702% 3.824%, 17.757% 3.784%,
+          17.814% 3.752%, 17.871% 3.729%, 17.928% 3.715%, 17.985% 3.711%);
+  padding: 10px 0 10px;
 }

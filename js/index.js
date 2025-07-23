@@ -1,5 +1,3 @@
-const scrollbar = window.innerWidth - document.documentElement.clientWidth;
-
 const headerScroll = document.querySelector('.header__fixed')
 
 window.addEventListener('scroll', (e) => {
@@ -10,28 +8,25 @@ window.addEventListener('scroll', (e) => {
     }
 })
 
-const burgerIcon = document.querySelector('.header__burger-icon')
-const burgerNavList = document.querySelector('.header__navigation_side-menu')
+const burgerIcon = document.querySelector('.header__burger-icon');
+const sideMenu = document.querySelector('.header__side-menu');
+const overlay = document.querySelector('.header__overlay');
+
 burgerIcon.addEventListener('click', (e) => {
-    burgerNavList.classList.toggle('active', !burgerNavList.classList.contains('active'));
+    burgerIcon.classList.toggle('active');
+    sideMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.classList.toggle('no-scroll')
+})
 
-    if (burgerNavList.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = `${scrollbar}px`;
-    }else {
-        document.body.style.overflow = 'auto';
-        document.body.style.paddingRight = ``;
-    }
-});
-
-
-const burgerLinks = burgerNavList.querySelectorAll('li');
-burgerLinks.forEach(link => {
+const sideMenuLink = sideMenu.querySelectorAll('li');
+sideMenuLink.forEach(link => {
     link.addEventListener('click', (e) => {
-        if (burgerNavList.classList.contains('active')) {
-            burgerNavList.classList.remove('active');
-            document.body.style.overflow = 'auto';
-            document.body.style.paddingRight = ``;
+        if (sideMenu.classList.contains('active')) {
+            sideMenu.classList.remove('active');
+            burgerIcon.classList.toggle('active');
+            overlay.classList.remove('active');
+            document.body.classList.remove('no-scroll')
         }
     })
 })
@@ -42,11 +37,11 @@ const swiperTopNft = new Swiper ('.top-nft__swiper', {
 
     breakpoints: {
         0:{
-            slidesPerView: 1,
+            slidesPerView: 1.13,
             spaceBetween: 24,
         },
         769:{
-            slidesPerView: 2,
+            slidesPerView: 2.5,
             spaceBetween: 25,
         },
         1201:{
@@ -88,66 +83,18 @@ tabButtons.forEach((tabButton,index) => {
         }
     })
 })
-/*
-const swiperSkinsModel = new Swiper ('.collections__swiper-skins', {
-    loop: true,
-    grabCursor: true,
-
-    autoplay: {
-        delay: 1600,
-        disableOnInteraction: true
-    },
-
-    slidesPerView: 1,
-    speed: 1000,
-
-
-    effect: 'creative',
-    creativeEffect: {
-        prev: {
-            translate: ['-100%', 0, -500],
-            opacity: 0
-        },
-        next: {
-            translate: ['100%', 0, -500],
-            opacity: 0
-        }
-    },
-    navigation: {
-        nextEl: '.collections__btn-view'
-    },
-})
-
-
-const collectionBtn = document.querySelectorAll ('.collections__btn')
-
-collectionBtn.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        swiperSkinsModel.slideToLoop(index);
-
-    })
-});
-
-//collectionBtn[0].classList.add('active');
-
-swiperSkinsModel.on('slideChange', function (index){
-    const activeIndex = swiperSkinsModel.realIndex;
-    collectionBtn.forEach((btn, index) => {
-        btn.classList.toggle('active', index === activeIndex);
-    })
-})
- */
 
 const swiperAccounts = new Swiper ('.collections__swiper-accounts', {
     loop: true,
     grabCursor: true,
+
     breakpoints: {
         0:{
-            slidesPerView: 1,
+            slidesPerView: 1.13,
             spaceBetween: 24,
         },
         769:{
-            slidesPerView: 2,
+            slidesPerView: 2.5,
             spaceBetween: 25,
         },
         1201:{
@@ -172,17 +119,22 @@ btnShowMore.addEventListener('click', (e) => {
     }
 })
 
+const accordionBtn = document.querySelectorAll('.footer__list')
+const accordionMarker  = document.querySelectorAll('.footer__show-more')
+const accordionContent = document.querySelectorAll('.footer__list-section')
 
+accordionBtn.forEach((btn, index) => {
+    if (window.innerWidth < 769){
+        btn.addEventListener('click', (e) => {
+            accordionContent.forEach((content,contentIndex) =>{
+                if (contentIndex !== index){
+                    content.classList.remove('active');
+                    accordionMarker[contentIndex].classList.remove('active');
+                }
+            });
 
-
-
-
-
-
-
-
-
-
-
-
-
+            accordionContent[index].classList.toggle('active');
+            accordionMarker[index].classList.toggle('active');
+        })
+    }
+})
