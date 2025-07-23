@@ -4,7 +4,6 @@
 .hero{
   position: relative;
 
-
   &__wrapper{
     max-width: 1458px;
     padding: 195px 32px 0;
@@ -43,7 +42,7 @@
       left: 834px;
       width: 118px;
       height: 23px;
-      background: url("../../assets/svg/wave.svg") no-repeat center/contain;
+      background: url("/OceanNFT/assets/svg/wave.svg") no-repeat center/contain;
 
       @include mixins.respond(laptop){
         width: 0;
@@ -308,7 +307,6 @@
     }
   }
 
-
   &__create{
     font-family: variables.$font-family-primary;
     font-size: variables.$font-size-full-m;
@@ -450,11 +448,11 @@
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25),
                0 4px 4px 0 rgba(0, 0, 0, 0.25),
                0 4px 4px 0 rgba(0, 0, 0, 0.25);
-   -webkit-mask-image: url('../../assets/img/hero/cards-mask.webp');
+   -webkit-mask-image: url('/OceanNFT/assets/img/hero/cards-mask.webp');
    -webkit-mask-repeat: no-repeat;
    -webkit-mask-position: center;
    -webkit-mask-size: cover;
-   mask-image: url('../../assets/img/hero/cards-mask.webp');
+   mask-image: url('/OceanNFT/assets/img/hero/cards-mask.webp');
    mask-repeat: no-repeat;
    mask-position: center;
    mask-size: cover;
@@ -562,7 +560,12 @@
       }
 
       &:last-of-type{
-        flex: 0 1 41.94%;
+        flex: 1 1 41.94%;
+
+        @include mixins.respond(pc){
+          flex: 0 1 44.94%;
+
+        }
       }
     }
 
@@ -605,6 +608,12 @@
       font-size: variables.$font-size-mobile-s;
       line-height: 3.2;
       margin-bottom: 4px;
+
+      &:last-of-type{
+        @include mixins.respond(pc){
+          padding-left: 12px;
+        }
+      }
     }
 
     .cards__coin{
@@ -637,6 +646,10 @@
       max-width: 104px;
       gap: 19px;
       margin-top: -16px;
+
+      @include mixins.respond(pc){
+        padding-left: 12px;
+      }
     }
 
     .cards__timer-value{
@@ -646,7 +659,11 @@
     .cards__timer-description{
       font-size: variables.$font-size-mobile-s;
       line-height: 1.6;
-      margin: -6px 0 22px;
+      margin: -6px 0 25px;
+
+      @include mixins.respond(mobile){
+        margin-bottom: 22px;
+      }
     }
 
     .cards__btn{
@@ -670,15 +687,14 @@
       font-size: variables.$font-size-full-xs;
       gap: 4px;
       border-radius: 5px;
-      padding: 7px 5px;
+      padding: 10px 10px 7px 12px;
 
-      @include mixins.respond(tablet){
-
+      @include mixins.respond(laptop){
+        padding: 10px 5px 7px 12px;
       }
 
       @include mixins.respond(mobile){
-        padding: 7px 10px 7px 5px;
-
+        padding: 7px 10px 7px 12px;
       }
     }
   }
@@ -704,7 +720,6 @@
       @include mixins.respond(tablet){
         justify-content: center;
       }
-
 
       @include mixins.respond(mobile){
         max-width: 315px;

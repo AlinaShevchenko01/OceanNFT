@@ -42,7 +42,6 @@
       @include mixins.respond(tablet){
         flex: 1 1 29.86%;
       }
-
     }
 
     &:last-of-type{
@@ -68,11 +67,11 @@
             variables.$color-gradient-3 43.26%,
             variables.$color-gradient-1 85.44%,
             variables.$color-gradient-2 100%);
-    -webkit-mask: url('../../assets/svg/eth.svg');
+    -webkit-mask: url('/OceanNFT/assets/svg/eth.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
-    mask: url('../../assets/svg/eth.svg');
+    mask: url('/OceanNFT/assets/svg/eth.svg');
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -119,6 +118,7 @@
   }
 
   &__inner{
+
     &:first-of-type{
       flex: 0 1 44.83%;
 
@@ -133,6 +133,7 @@
 
       svg{
         fill: variables.$color-text;
+        cursor: pointer;
       }
     }
   }
@@ -150,7 +151,6 @@
       font-weight: variables.$font-weight-bold;
       letter-spacing: 0.025em;
 
-
       &:last-of-type{
         padding-right: 19px;
 
@@ -161,11 +161,7 @@
         @include mixins.respond(mobile){
           padding-right: 0;
         }
-       }
-    }
-
-    li{
-      cursor: pointer;
+      }
     }
 
     a{
