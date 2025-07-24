@@ -2911,6 +2911,11 @@ h2 {
 .collections__btn-explore {
   margin: 39px auto 0;
 }
+@media (max-width: 375px) {
+  .collections__btn-explore {
+    margin: 39px 0 0 94px;
+  }
+}
 .collections__btn-explore-inner {
   padding: 10px 0 0 10px;
 }

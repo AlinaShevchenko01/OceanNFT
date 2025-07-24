@@ -487,6 +487,10 @@
 
   &__btn-explore{
     margin: 39px auto 0;
+
+    @include mixins.respond(mobile){
+      margin: 39px 0 0 94px;
+    }
   }
 
   &__btn-explore-inner{
