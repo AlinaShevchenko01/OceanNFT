@@ -24,12 +24,8 @@ h1{
   font-family: variables.$font-family-fifth;
   font-size: variables.$font-size-full-title;
   font-weight: variables.$font-weight-semi-bold;
-  line-height: 1.37;
-
-  @include mixins.respond(pc){
-    line-height: 1.3;
-    letter-spacing: 0.053em;
-  }
+  line-height: 1.3;
+  letter-spacing: 0.053em;
 
   @include mixins.respond(laptop){
     font-size: variables.$font-size-full-xxxl;
@@ -39,12 +35,16 @@ h1{
     font-family: variables.$font-family-title-mobile;
     font-size: variables.$font-size-mobile-title;
     font-weight: variables.$font-weight-bold;
+    line-height: 1.37;
+    letter-spacing: 0.01em
   }
 
   @include mixins.respond(mobile){
     font-family: variables.$font-family-title-mobile;
     font-size: variables.$font-size-mobile-title;
     font-weight: variables.$font-weight-bold;
+    line-height: 1.37;
+    letter-spacing: 0.01em;
   }
 }
 

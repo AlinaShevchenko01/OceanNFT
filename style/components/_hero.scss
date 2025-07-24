@@ -153,7 +153,6 @@
     }
 
     @include mixins.respond(mobile){
-      letter-spacing: 0.01em;
       margin-bottom: 27px;
     }
   }
