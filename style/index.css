@@ -2210,9 +2210,14 @@ h2 {
   margin: 0 auto;
   padding: 218px 32px 0;
 }
+@media (min-width: 769px) and (max-width: 1440px) {
+  .top-nft__wrapper {
+    padding: 218px 0 0 32px;
+  }
+}
 @media (min-width: 376px) and (max-width: 768px) {
   .top-nft__wrapper {
-    padding: 236px 30px 0;
+    padding: 236px 0 0 30px;
   }
 }
 @media (max-width: 375px) {
@@ -2269,12 +2274,19 @@ h2 {
 }
 @media (min-width: 769px) and (max-width: 1440px) {
   .top-nft__swiper-slide {
-    width: 438px !important;
+    max-width: 439px;
+    object-fit: contain;
   }
 }
 @media (min-width: 376px) and (max-width: 768px) {
   .top-nft__swiper-slide {
-    width: 304px !important;
+    max-width: 430px;
+    object-fit: contain;
+  }
+}
+@media (max-width: 375px) {
+  .top-nft__swiper-slide {
+    object-fit: contain;
   }
 }
 .top-nft__img {
@@ -2358,6 +2370,18 @@ h2 {
 .top-nft__cards .cards__wrapper .cards__btn {
   background: linear-gradient(-45deg, #FFA6FA 47%, #3C79D4 97%);
 }
+@media (min-width: 769px) and (max-width: 1440px) {
+  .top-nft__cards .cards__wrapper .cards__btn {
+    width: 86%;
+    max-width: 113px;
+  }
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  .top-nft__cards .cards__wrapper .cards__btn {
+    width: 90%;
+    max-width: 94px;
+  }
+}
 @media (max-width: 375px) {
   .top-nft__cards .cards__wrapper .cards__btn {
     width: 98%;
@@ -2367,11 +2391,18 @@ h2 {
   gap: 12px;
   padding: 10px 15px 10px 10px;
 }
+@media (min-width: 769px) and (max-width: 1440px) {
+  .top-nft__cards .cards__wrapper .cards__btn-inner {
+    gap: 6px;
+    font-size: 17px;
+    padding: 10px 6px 10px 6px;
+  }
+}
 @media (min-width: 376px) and (max-width: 768px) {
   .top-nft__cards .cards__wrapper .cards__btn-inner {
     justify-content: center;
     gap: 19px;
-    padding: 7px 6px 12px 7px;
+    padding: 7px 2px 12px 2px;
   }
 }
 @media (max-width: 375px) {
@@ -2429,7 +2460,7 @@ h2 {
 }
 @media (max-width: 375px) {
   .collections__wrapper {
-    padding: 108px 25px 0;
+    padding: 108px 0 0 25px;
   }
 }
 .collections__container {
@@ -2738,18 +2769,18 @@ h2 {
 }
 @media (min-width: 769px) and (max-width: 1440px) {
   .collections__accounts {
-    width: 438px !important;
+    object-fit: contain;
   }
 }
 @media (min-width: 376px) and (max-width: 768px) {
   .collections__accounts {
-    max-width: 306px;
+    object-fit: contain;
     padding: 70px 27px 29px;
   }
 }
 @media (max-width: 375px) {
   .collections__accounts {
-    width: 303px !important;
+    object-fit: contain;
     padding: 70px 27px 25px;
   }
 }

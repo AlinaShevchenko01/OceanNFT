@@ -29,7 +29,7 @@
     }
 
     @include mixins.respond(mobile){
-      padding: 108px 25px 0;
+      padding: 108px 0 0 25px;
     }
   }
 
@@ -351,16 +351,16 @@
     padding: 101px 39px 40px;
 
     @include mixins.respond(laptop){
-      width: 438px !important;
+      object-fit: contain;
     }
 
     @include mixins.respond(tablet){
-      max-width: 306px;
+      object-fit: contain;
       padding: 70px 27px 29px;
     }
 
     @include mixins.respond(mobile){
-      width: 303px !important;
+      object-fit: contain;
       padding: 70px 27px 25px;
     }
   }

@@ -40,12 +40,16 @@ const swiperTopNft = new Swiper ('.top-nft__swiper', {
             slidesPerView: 1.13,
             spaceBetween: 24,
         },
+        376: {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+        },
         769:{
-            slidesPerView: 2.5,
+            slidesPerView: 2,
             spaceBetween: 25,
         },
         1201:{
-            slidesPerView: 2.5,
+            slidesPerView: 2.9,
             spaceBetween: 30,
         },
         1441:{
@@ -93,8 +97,12 @@ const swiperAccounts = new Swiper ('.collections__swiper-accounts', {
             slidesPerView: 1.13,
             spaceBetween: 24,
         },
+        376: {
+            slidesPerView: 1.6,
+            spaceBetween: 20,
+        },
         769:{
-            slidesPerView: 2.5,
+            slidesPerView: 2.3,
             spaceBetween: 25,
         },
         1201:{
