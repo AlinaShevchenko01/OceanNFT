@@ -1989,7 +1989,7 @@ h2 {
 }
 @media (min-width: 769px) and (max-width: 1440px) {
   .hero__cards {
-    left: 6.63vw;
+    left: 3vw;
   }
 }
 @media (min-width: 376px) and (max-width: 768px) {
@@ -3596,6 +3596,11 @@ h2 {
   border: none;
   border-radius: 6px 0 0 6px;
   padding: 17px 0 18px 16px;
+}
+@media (min-width: 769px) and (max-width: 1440px) {
+  .what-NFT__email {
+    padding: 17px 0 18px 8px;
+  }
 }
 @media (min-width: 376px) and (max-width: 768px) {
   .what-NFT__email {

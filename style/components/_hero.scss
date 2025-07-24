@@ -489,7 +489,7 @@
     left: 154px;
 
     @include mixins.respond(laptop){
-      left: 6.63vw;
+      left: 3vw;
     }
 
     @include mixins.respond(tablet){
