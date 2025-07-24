@@ -14,10 +14,12 @@
 
   @include mixins.respond(tablet){
     background-size: 100% 300px;
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 
   @include mixins.respond(mobile){
     background-size: 100% 300px;
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 
   &__wrapper{

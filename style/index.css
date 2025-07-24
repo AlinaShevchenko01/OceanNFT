@@ -3238,11 +3238,13 @@ h2 {
 @media (min-width: 376px) and (max-width: 768px) {
   .what-NFT {
     background-size: 100% 300px;
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 }
 @media (max-width: 375px) {
   .what-NFT {
     background-size: 100% 300px;
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 }
 .what-NFT__wrapper {
