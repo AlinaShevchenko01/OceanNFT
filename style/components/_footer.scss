@@ -13,15 +13,12 @@
       padding: 0 32px 32px;
     }
 
-    @include mixins.respond(tablet){
-      max-width: 768px;
-      padding: 0 32px 98px;
-      margin: 0 auto;
-    }
-
-    @include mixins.respond(mobile){
-      max-width: 375px;
-      padding: 0 25px 98px;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        max-width: 100%;
+        padding: 0 25px 98px;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -36,12 +33,10 @@
       gap: 20px;
     }
 
-    @include mixins.respond(tablet){
-      flex-direction: column;
-    }
-
-    @include mixins.respond(mobile){
-      flex-direction: column;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        flex-direction: column;
+      }
     }
 
     &:first-of-type{
@@ -51,14 +46,11 @@
         padding: 60px 0;
       }
 
-      @include mixins.respond(tablet){
-        gap: 0;
-        padding: 28px 0 0;
-      }
-
-      @include mixins.respond(mobile){
-        gap: 0;
-        padding: 28px 0 0;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small {
+        @include mixins.respond($breakpoint){
+          gap: 0;
+          padding: 28px 0 0;
+        }
       }
 
       &::before{
@@ -70,35 +62,36 @@
         height: 2px;
         background-color: variables.$color-footer-border;
 
-        @include mixins.respond(tablet){
-          width: 100%;
-          height: 1px;
-        }
-
-        @include mixins.respond(mobile){
-          width: 100%;
-          height: 1px;
+        @each $breakpoint in tablet-large, tablet, mobile, mobile-small {
+          @include mixins.respond($breakpoint){
+            width: 100%;
+            height: 1px;
+          }
         }
       }
     }
 
     &:last-of-type{
       align-items: center;
-      font-size: variables.$font-size-mobile-xl;
+      font-size: 14px;
       padding-top: 29px;
 
       @include mixins.respond(laptop){
         padding-top: 12px;
       }
 
-      @include mixins.respond(tablet){
-        flex-direction: column-reverse;
+      @each $breakpoint in tablet-large, tablet {
+        @include mixins.respond($breakpoint){
+          flex-direction: column-reverse;
+        }
       }
 
-      @include mixins.respond(mobile){
-        flex-direction: column-reverse;
-        gap: 42px;
-        padding-top: 24px;
+      @each $breakpoint in mobile, mobile-small {
+        @include mixins.respond($breakpoint){
+          flex-direction: column-reverse;
+          gap: 42px;
+          padding-top: 24px;
+        }
       }
 
       &::before{
@@ -110,14 +103,11 @@
         height: 2px;
         background-color: variables.$color-footer-border;
 
-        @include mixins.respond(tablet){
-          width: 0;
-          height: 0;
-        }
-
-        @include mixins.respond(mobile){
-          width: 0;
-          height: 0;
+        @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+          @include mixins.respond($breakpoint){
+            width: 0;
+            height: 0;
+          }
         }
       }
     }
@@ -127,24 +117,20 @@
     &:first-of-type{
       flex: 0 1 20.3%;
 
-      @include mixins.respond(tablet){
-        flex: 1 1 100%;
-      }
-
-      @include mixins.respond(mobile){
-        flex: 1 1 100%;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+        @include mixins.respond($breakpoint){
+          flex: 1 1 100%;
+        }
       }
     }
 
     &:last-of-type{
       flex: 0 1 73.21%;
 
-      @include mixins.respond(tablet){
-        flex: 1 1 100%;
-      }
-
-      @include mixins.respond(mobile){
-        flex: 1 1 100%;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+        @include mixins.respond($breakpoint){
+          flex: 1 1 100%;
+        }
       }
     }
   }
@@ -153,18 +139,16 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    font-size: variables.$font-size-full-m;
+    font-size: 19px;
     color: variables.$color-text;
     margin-bottom: 31px;
 
-    @include mixins.respond(tablet){
-      align-items: flex-end;
-      letter-spacing: 0.02em;
-    }
-
-    @include mixins.respond(mobile){
-      align-items: flex-end;
-      letter-spacing: 0.02em;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        align-items: flex-end;
+        letter-spacing: 0.02em;
+        margin-bottom: 33px;
+      }
     }
 
     svg{
@@ -174,11 +158,11 @@
               variables.$color-gradient-3 43.26%,
               variables.$color-gradient-1 85.44%,
               variables.$color-gradient-2 100%);
-      -webkit-mask: url('/OceanNFT/assets/svg/eth.svg');
+      -webkit-mask: url('../../assets/svg/eth.svg');
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: center;
       -webkit-mask-size: contain;
-      mask: url('/OceanNFT/assets/svg/eth.svg');
+      mask: url('../../assets/svg/eth.svg');
       mask-repeat: no-repeat;
       mask-position: center;
       mask-size: contain;
@@ -193,36 +177,28 @@
     gap: 17px;
     fill: variables.$color-text;
 
-    @include mixins.respond(tablet){
-      margin-bottom: 35px;
-    }
-
-    @include mixins.respond(mobile){
-      margin-bottom: 35px;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        margin-bottom: 33px;
+      }
     }
   }
 
   &__text{
-    font-size: variables.$font-size-mobile-xxl;
+    font-size: 15px;
     line-height: 1.82;
     letter-spacing: 0.015em;
     margin-bottom: 27px;
 
     @include mixins.respond(laptop){
-      font-size: variables.$font-size-mobile-l;
       letter-spacing: 0;
     }
 
-    @include mixins.respond(tablet){
-      font-size: variables.$font-size-mobile-xxl;
-      letter-spacing: 0.02em;
-      margin-bottom: 26px;
-    }
-
-    @include mixins.respond(mobile){
-      font-size: variables.$font-size-mobile-xxl;
-      letter-spacing: 0.02em;
-      margin-bottom: 26px;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        letter-spacing: 0.02em;
+        margin-bottom: 26px;
+      }
     }
   }
 
@@ -235,39 +211,32 @@
       gap: 16px;
     }
 
-    @include mixins.respond(tablet){
-      width: 100%;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    @include mixins.respond(mobile){
-      width: 100%;
-      flex-direction: column;
-      gap: 0;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+      }
     }
   }
 
   &__list{
     flex: 1 1 176px;
-    font-size: variables.$font-size-full-m;
+    font-size: 19px;
     font-weight: variables.$font-weight-medium;
     letter-spacing: 0.02em;
     color: variables.$color-text;
 
     @include mixins.respond(laptop){
-      font-size: variables.$font-size-mobile-xxl;
+      font-size: 16px;
       letter-spacing: 0;
     }
 
-    @include mixins.respond(tablet){
-      flex: 1 1 auto;
-      border-bottom: 1px solid variables.$color-footer-border;
-    }
-
-    @include mixins.respond(mobile){
-      flex: 1 1 auto;
-      border-bottom: 1px solid variables.$color-footer-border;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        flex: 1 1 auto;
+        border-bottom: 1px solid variables.$color-footer-border;
+      }
     }
 
     &:last-of-type{
@@ -276,18 +245,14 @@
   }
 
   &__list-title{
-    @include mixins.respond(tablet) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0 0;
-    }
 
-    @include mixins.respond(mobile){
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0 0;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0 0;
+      }
     }
 
     svg{
@@ -296,12 +261,10 @@
       transition: rotate 1s ease;
       margin-right: 21px;
 
-      @include mixins.respond(tablet){
-        display: inline-block;
-      }
-
-      @include mixins.respond(mobile){
-        display: inline-block;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+        @include mixins.respond($breakpoint){
+          display: inline-block;
+        }
       }
 
       &.active{
@@ -317,16 +280,12 @@
     gap:13px;
     margin-top: 24px;
 
-    @include mixins.respond(tablet){
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 1s ease;
-    }
-
-    @include mixins.respond(mobile){
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 1s ease;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease;
+      }
     }
 
     &.active{
@@ -336,14 +295,10 @@
 
   &__list-item{
     a{
-      font-size: variables.$font-size-mobile-xxl;
+      font-size: 15px;
       color: variables.$color-footer-2;
       line-height: 1.8;
       letter-spacing: 0.01em;
-
-      @include mixins.respond(laptop){
-        font-size: variables.$font-size-mobile-l;
-      }
     }
   }
 
@@ -352,23 +307,14 @@
 
     span{
       font-family: variables.$font-family-eighth;
-      font-size: variables.$font-size-tablet-xxl;
+      font-size: 22px;
       color: variables.$color-footer;
       margin-left: 9px;
-
-      @include mixins.respond(laptop){
-        font-size: variables.$font-size-mobile-m;
-        margin-left: 2px;
-      }
     }
   }
 
   &__develop{
-    font-size: variables.$font-size-mobile-xxl;
-
-    @include mixins.respond(laptop){
-      font-size: variables.$font-size-mobile-l;
-    }
+    font-size: 15px;
   }
 
   &__conditions{
@@ -376,62 +322,47 @@
     gap: 8px;
     margin-right: 40px;
 
-    @include mixins.respond(tablet){
-      justify-content: center;
-      gap: 41px;
-      margin-right: 20px;
-    }
-
-    @include mixins.respond(mobile){
-      justify-content: center;
-      gap: 41px;
-      margin-right: 20px;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        justify-content: center;
+        gap: 41px;
+        margin-right: 20px;
+      }
     }
 
     li{
       border-right: 2px solid variables.$color-footer-2;
 
-      @include mixins.respond(tablet){
-        border-right: none;
-      }
-
-      @include mixins.respond(mobile){
-        border-right: none;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+        @include mixins.respond($breakpoint){
+          border-right: none;
+        }
       }
 
       &:last-of-type{
         border-right: none;
         padding-right: 4px;
 
-        @include mixins.respond(tablet){
-          display: none;
-        }
-
-        @include mixins.respond(mobile){
-          display: none;
+        @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+          @include mixins.respond($breakpoint){
+            display: none;
+          }
         }
       }
     }
 
     a{
-      font-size: variables.$font-size-mobile-xxl;
+      font-size: 15px;
       color: variables.$color-footer-2;
       line-height: 1.71;
       letter-spacing: 0.03em;
       padding-right: 9px;
 
-      @include mixins.respond(laptop){
-        font-size: variables.$font-size-mobile-l;
-      }
-
-      @include mixins.respond(tablet){
-        padding-right: 0;
-        letter-spacing: 0;
-      }
-
-      @include mixins.respond(mobile){
-        padding-right: 0;
-        letter-spacing: 0;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+        @include mixins.respond($breakpoint){
+          padding-right: 0;
+          letter-spacing: 0;
+        }
       }
     }
   }

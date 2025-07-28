@@ -17,19 +17,28 @@ burgerIcon.addEventListener('click', (e) => {
     sideMenu.classList.toggle('active');
     overlay.classList.toggle('active');
     document.body.classList.toggle('no-scroll')
-})
+});
 
 const sideMenuLink = sideMenu.querySelectorAll('li');
 sideMenuLink.forEach(link => {
     link.addEventListener('click', (e) => {
         if (sideMenu.classList.contains('active')) {
             sideMenu.classList.remove('active');
-            burgerIcon.classList.toggle('active');
+            burgerIcon.classList.remove('active');
             overlay.classList.remove('active');
             document.body.classList.remove('no-scroll')
         }
     })
-})
+});
+
+window.addEventListener('resize', (e) => {
+    if (sideMenu.classList.contains('active')) {
+        sideMenu.classList.remove('active');
+        burgerIcon.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll')
+    }
+});
 
 const swiperTopNft = new Swiper ('.top-nft__swiper', {
     loop: true,
@@ -37,20 +46,24 @@ const swiperTopNft = new Swiper ('.top-nft__swiper', {
 
     breakpoints: {
         0:{
-            slidesPerView: 1.13,
-            spaceBetween: 24,
+            slidesPerView: 1.1,
+            spaceBetween: 20,
         },
-        376: {
-            slidesPerView: 1.2,
+        375: {
+            slidesPerView: 1.13,
+            spaceBetween: 20,
+        },
+        576:{
+            slidesPerView: 1.5,
             spaceBetween: 20,
         },
         769:{
             slidesPerView: 2,
             spaceBetween: 25,
         },
-        1201:{
-            slidesPerView: 2.9,
-            spaceBetween: 30,
+        1025:{
+            slidesPerView: 2.1,
+            spaceBetween: 22,
         },
         1441:{
             slidesPerView: 3,
@@ -94,20 +107,24 @@ const swiperAccounts = new Swiper ('.collections__swiper-accounts', {
 
     breakpoints: {
         0:{
-            slidesPerView: 1.13,
-            spaceBetween: 24,
+            slidesPerView: 1.1,
+            spaceBetween: 20,
         },
-        376: {
-            slidesPerView: 1.6,
+        375: {
+            slidesPerView: 1.13,
+            spaceBetween: 20,
+        },
+        576:{
+            slidesPerView: 1.8,
             spaceBetween: 20,
         },
         769:{
-            slidesPerView: 2.3,
+            slidesPerView: 2.2,
             spaceBetween: 25,
         },
-        1201:{
+        1025:{
             slidesPerView: 2.5,
-            spaceBetween: 30,
+            spaceBetween: 25,
         },
         1441:{
             slidesPerView: 3,
@@ -121,7 +138,7 @@ const sellersList = document.querySelector('.top-sellers__cards')
 const iconShowMore = document.querySelector('.top-sellers__show-more')
 
 btnShowMore.addEventListener('click', (e) => {
-    if (window.innerWidth < 769){
+    if (window.innerWidth < 1025){
         sellersList.classList.toggle('active');
         iconShowMore.classList.toggle('active');
     }
@@ -132,7 +149,7 @@ const accordionMarker  = document.querySelectorAll('.footer__show-more')
 const accordionContent = document.querySelectorAll('.footer__list-section')
 
 accordionBtn.forEach((btn, index) => {
-    if (window.innerWidth < 769){
+    if (window.innerWidth < 1025){
         btn.addEventListener('click', (e) => {
             accordionContent.forEach((content,contentIndex) =>{
                 if (contentIndex !== index){

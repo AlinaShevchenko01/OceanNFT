@@ -8,7 +8,7 @@
     top: 0;
     width: 100%;
     z-index: 50;
-    transition: background 300ms ease;
+    transition: background 0.3s ease;
 
     &.scrolled{
       background: variables.$color-header-bgc;
@@ -24,12 +24,26 @@
     padding: 50px 32px 30px;
     margin: 0 auto;
 
+    @include mixins.respond(laptop){
+      max-width: 1390px;
+    }
+
+    @include mixins.respond(tablet-large){
+      max-width: 1024px;
+      padding: 24px 29px 12px 23px;
+    }
+
     @include mixins.respond(tablet){
       max-width: 768px;
       padding: 24px 29px 12px 23px;
     }
 
     @include mixins.respond(mobile){
+      max-width: 575px;
+      padding: 24px 29px 12px 23px;
+    }
+
+    @include mixins.respond(mobile-small){
       max-width: 375px;
       padding: 24px 29px 12px 23px;
     }
@@ -38,6 +52,10 @@
   &__container{
     &:first-of-type{
       flex: 1 0 9.5%;
+
+      @include mixins.respond(tablet-large){
+        flex: 1 1 29.86%;
+      }
 
       @include mixins.respond(tablet){
         flex: 1 1 29.86%;
@@ -48,12 +66,10 @@
       flex: 1 1 73.6%;
       max-width: 73.6%;
 
-      @include mixins.respond(tablet){
-        flex: 0 0 0;
-      }
-
-      @include mixins.respond(mobile){
-        flex: 0 0 0;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+        @include mixins.respond($breakpoint){
+          flex: 0 0 0;
+        }
       }
     }
   }
@@ -67,11 +83,11 @@
             variables.$color-gradient-3 43.26%,
             variables.$color-gradient-1 85.44%,
             variables.$color-gradient-2 100%);
-    -webkit-mask: url('/OceanNFT/assets/svg/eth.svg');
+    -webkit-mask: url('../../assets/svg/eth.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
-    mask: url('/OceanNFT/assets/svg/eth.svg');
+    mask: url('../../assets/svg/eth.svg');
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -82,18 +98,15 @@
     display: flex;
     align-items: center;
     font-family: variables.$font-family-primary;
-    font-size: variables.$font-size-full-m;
+    font-size: 19px;
     font-weight: variables.$font-weight-bold;
     padding-left: 10px;
 
-    @include mixins.respond(tablet){
-      gap: 3px;
-      font-size: variables.$font-size-full-xxs;
-    }
-
-    @include mixins.respond(mobile){
-      gap: 3px;
-      font-size: variables.$font-size-full-xxs;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        gap: 3px;
+        font-size: 16px;
+      }
     }
 
     span{
@@ -108,12 +121,10 @@
     align-items: center;
     gap: 40px;
 
-    @include mixins.respond(tablet){
-      display: none;
-    }
-
-    @include mixins.respond(mobile){
-      display: none;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        display: none;
+      }
     }
   }
 
@@ -121,7 +132,6 @@
 
     &:first-of-type{
       flex: 0 1 44.83%;
-
     }
 
     &:last-of-type{
@@ -147,19 +157,17 @@
       align-items: center;
       gap: 32px;
       font-family: variables.$font-family-primary;
-      font-size: variables.$font-size-full-m;
+      font-size: 19px;
       font-weight: variables.$font-weight-bold;
       letter-spacing: 0.025em;
 
       &:last-of-type{
         padding-right: 19px;
 
-        @include mixins.respond(tablet){
-          padding-right: 0;
-        }
-
-        @include mixins.respond(mobile){
-          padding-right: 0;
+        @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+          @include mixins.respond($breakpoint){
+            padding-right: 0;
+          }
         }
       }
     }
@@ -180,13 +188,10 @@
  &__burger{
    display: none;
 
-   @include mixins.respond(tablet){
-
-     display: block;
-   }
-
-   @include mixins.respond(mobile){
-     display: block;
+   @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+     @include mixins.respond($breakpoint){
+       display: block;
+     }
    }
  }
 
@@ -197,14 +202,14 @@
     width: 30%;
     height: 100%;
     background: variables.$color-overlay;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
     z-index: 1000;
+    pointer-events: none;
 
     &.active{
-      opacity: 1;
-      visibility: visible;
+      transform: translateX(0%);
+      pointer-events: auto;
     }
   }
 
@@ -212,12 +217,10 @@
     width: 22px;
     height: 20px;
     position: relative;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-
 
     span{
       display: block;
@@ -225,7 +228,7 @@
       width: 100%;
       background: variables.$color-text;
       border-radius: 2px;
-      transition: all 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
       z-index: 1001;
 
       &:nth-child(2){
@@ -234,9 +237,10 @@
     }
 
     &.active{
+
       span {
         &:nth-child(1) {
-          transform: rotate(45deg) translateY(12px);
+          transform: rotate(45deg) translateY(12px) scale(1.6);
         }
 
         &:nth-child(2) {
@@ -244,12 +248,11 @@
         }
 
         &:nth-child(3) {
-          transform: rotate(-45deg) translateY(-12px);
+          transform: rotate(-45deg) translateY(-12px) scale(1.6);
         }
       }
     }
   }
-
 
   &__side-menu{
     position: fixed;
@@ -258,14 +261,13 @@
     width: 70%;
     height: 100%;
     background: variables.$color-bg-main;
-
     pointer-events: none;
-    transition: left 500ms ease;
-    z-index: 999;
-
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    z-index: 1000;
 
     &.active{
-      left: 0;
+      transform: translateX(100%);
       pointer-events: auto;
     }
 
@@ -277,7 +279,7 @@
       flex-direction: column;
       align-items: center;
       gap: 16px;
-      font-size: variables.$font-size-full-s;
+      font-size: 18px;
       padding-top: 80px;
     }
 
@@ -288,7 +290,6 @@
               variables.$color-border-gradient-1 47%,
               variables.$color-border-gradient-2 97%) 1;
       margin-bottom: 16px;
-
     }
 
     a{

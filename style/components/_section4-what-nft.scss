@@ -3,7 +3,7 @@
 
 .what-NFT{
   position: relative;
-  background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1.webp");
+  background-image: url("../../assets/img/section4-what-nft/section4-bg1.webp");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 556px;
@@ -12,14 +12,23 @@
     background-size: 100% 420px;
   }
 
+  @include mixins.respond(tablet-large){
+    background-size: 100% 400px;
+  }
+
   @include mixins.respond(tablet){
-    background-size: 100% 300px;
-    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-size: contain;
+    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 
   @include mixins.respond(mobile){
     background-size: 100% 300px;
-    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
+  }
+
+  @include mixins.respond(mobile-small){
+    background-size: 100% 300px;
+    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 
   &__wrapper{
@@ -27,21 +36,31 @@
     font-family: variables.$font-family-third;
     font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
     font-kerning: normal;
-    padding: 214px 6px 160px;
+    padding: 214px 6px 163px;
     margin: 0 auto;
 
     @include mixins.respond(laptop){
       padding-top: 180px;
     }
 
+    @include mixins.respond(tablet-large){
+      max-width: 1024px;
+      padding: 160px 6px 90px;
+    }
+
     @include mixins.respond(tablet){
-      max-width: 375px;
+      max-width: 768px;
       padding: 121px 21px;
     }
 
     @include mixins.respond(mobile){
       max-width: 375px;
       padding: 121px 21px 108px;
+    }
+
+    @include mixins.respond(mobile-small){
+      max-width: 320px;
+      padding: 121px 10px 108px;
     }
   }
 
@@ -59,12 +78,20 @@
     padding: 56px 49px 46px 72px;
 
     @include mixins.respond(laptop){
-    max-width: 440px;
-    padding: 40px;
+    max-width: 480px;
+      padding: 43px 40px 36px 52px;
+    }
+
+    @include mixins.respond(tablet-large){
+      max-width: 433px;
+      border: 2px solid;
+      border-image:linear-gradient(45deg,
+              rgba(255, 255, 255, 0.24) 0%,
+              rgba(255, 255, 255, 0.28) 100%) 1;
+      padding: 33px 30px 26px 42px;
     }
 
     @include mixins.respond(tablet){
-      right: auto;
       max-width: 333px;
       border: 2px solid;
       border-image:linear-gradient(45deg,
@@ -82,55 +109,69 @@
               rgba(255, 255, 255, 0.28) 100%) 1;
       padding: 33px 26px 26px 37px;
     }
+
+    @include mixins.respond(mobile-small){
+      right: auto;
+      max-width: 280px;
+      border: 2px solid;
+      border-image:linear-gradient(45deg,
+              rgba(255, 255, 255, 0.24) 0%,
+              rgba(255, 255, 255, 0.28) 100%) 1;
+      padding: 20px 14px;
+    }
   }
 
   &__title{
-    font-size: variables.$font-size-full-title-s;
+    font-size: 44px;
     font-weight: variables.$font-weight-extra-bold;
     line-height: 1.35;
     margin-bottom: 21px;
 
     @include mixins.respond(laptop){
-      font-size: variables.$font-size-mobile-title-m;
+      font-size: 35px;
       margin-bottom: 16px;
     }
 
-    @include mixins.respond(tablet){
-      font-size: variables.$font-size-mobile-title-s;
+    @include mixins.respond(tablet-large){
+      font-size: 32px;
       letter-spacing: 0.013em;
       margin-bottom: 10px;
     }
 
-    @include mixins.respond(mobile){
-      font-size: variables.$font-size-mobile-title-s;
-      letter-spacing: 0.013em;
-      margin-bottom: 10px;
+    @each $breakpoint in tablet, mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        font-size: 25px;
+        letter-spacing: 0.013em;
+        margin-bottom: 10px;
+      }
     }
   }
 
   &__text{
-    font-size: variables.$font-size-full-l;
+    font-size: 20px;
     font-weight: variables.$font-weight-regular;
     line-height: 1.78;
     margin-bottom: 44px;
 
     @include mixins.respond(laptop){
-      font-size: variables.$font-size-full-xxs;
+      font-size: 18px;
       margin-bottom: 32px;
     }
 
-    @include mixins.respond(tablet){
-      font-size: variables.$font-size-mobile-s;
+    @include mixins.respond(tablet-large){
+      font-size: 16px;
       letter-spacing: 0.028em;
       line-height: 1.88;
       margin-bottom: 26px;
     }
 
-    @include mixins.respond(mobile){
-      font-size: variables.$font-size-mobile-s;
-      letter-spacing: 0.028em;
-      line-height: 1.88;
-      margin-bottom: 26px;
+    @each $breakpoint in tablet, mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        font-size: 11px;
+        letter-spacing: 0.028em;
+        line-height: 1.88;
+        margin-bottom: 26px;
+      }
     }
   }
 
@@ -139,23 +180,24 @@
     display: flex;
     justify-content: space-between;
     gap: 16px;
-    font-size: variables.$font-size-full-xs;
+    font-size: 17px;
     font-weight: variables.$font-weight-medium;
     line-height: 1.5;
 
     @include mixins.respond(laptop){
+      font-size: 15px;
+    }
+
+    @include mixins.respond(tablet-large){
       max-width: 220px;
-      font-size: variables.$font-size-mobile-s;
+      font-size: 12px;
     }
 
-    @include mixins.respond(tablet){
-      max-width: 160px;
-      font-size: variables.$font-size-mobile-xs;
-    }
-
-    @include mixins.respond(mobile){
-      max-width: 160px;
-      font-size: variables.$font-size-mobile-xs;
+    @each $breakpoint in tablet, mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        max-width: 160px;
+        font-size: 10px;
+      }
     }
 
     button{
@@ -164,7 +206,7 @@
       gap: 14px;
       font-family: variables.$font-family-third;
       font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
-      font-size: variables.$font-size-full-xs;
+      font-size: 17px;
       font-weight: variables.$font-weight-medium;
       color: variables.$color-text;
       background-color: transparent;
@@ -172,30 +214,29 @@
       border: none;
 
       @include mixins.respond(laptop){
-        font-size: variables.$font-size-mobile-s;
+        font-size: 15px;
       }
 
-      @include mixins.respond(tablet){
+      @include mixins.respond(tablet-large){
         gap: 5px;
-        font-size: variables.$font-size-mobile-xs;
+        font-size: 12px;
       }
 
-      @include mixins.respond(mobile){
-        gap: 5px;
-        font-size: variables.$font-size-mobile-xs;
+      @each $breakpoint in tablet, mobile, mobile-small {
+        @include mixins.respond($breakpoint){
+          gap: 5px;
+          font-size: 10px;
+        }
       }
 
       svg{
         fill: variables.$color-text;
 
-        @include mixins.respond(tablet){
-          width: 8px;
-          height: 11px;
-        }
-
-        @include mixins.respond(mobile){
-          width: 8px;
-          height: 11px;
+        @each $breakpoint in tablet, mobile, mobile-small{
+          @include mixins.respond($breakpoint){
+            width: 8px;
+            height: 11px;
+          }
         }
       }
     }
@@ -209,16 +250,30 @@
     margin: 634px 0 0 30px;
 
     @include mixins.respond(laptop){
-      margin-top: 480px;
+      margin-top: 540px;
+    }
+
+    @include mixins.respond(tablet-large){
+      max-width: 800px;
+      gap: 0;
+      flex-direction: column-reverse;
+      padding: 0 30px;
+      margin: 480px auto 0;
     }
 
     @include mixins.respond(tablet){
       gap: 0;
       flex-direction: column-reverse;
-      margin: 350px 0 0 6px;
+      margin: 350px auto 0;
     }
 
     @include mixins.respond(mobile){
+      gap: 0;
+      flex-direction: column-reverse;
+      margin: 352px 0 0 6px;
+    }
+
+    @include mixins.respond(mobile-small){
       gap: 0;
       flex-direction: column-reverse;
       margin: 350px 0 0 6px;
@@ -230,40 +285,43 @@
     max-width: 55.21%;
     border-radius: 4px;
 
-    @include mixins.respond(tablet){
-      flex: 1 1 100%;
-      max-width: 100%;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
 
-    @include mixins.respond(mobile){
-      flex: 1 1 100%;
-      max-width: 100%;
+    @include mixins.respond(tablet-large){
+      max-height: 260px;
+      margin-top: 76px;
     }
   }
 
   &__background_full{
-    @include mixins.respond(tablet){
-      display: none;
-    }
 
-    @include mixins.respond(mobile){
-      display: none;
+    @each $breakpoint in tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        display: none;
+      }
     }
   }
 
   &__background_small{
     display: none;
 
-    @include mixins.respond(tablet){
-      display: block;
-      max-width: 326px;
-      margin-top: 108px;
+    @each $breakpoint in tablet, mobile{
+      @include mixins.respond($breakpoint){
+        display: block;
+        max-width: 326px;
+        margin: 108px auto 0;
+      }
     }
 
-    @include mixins.respond(mobile){
+    @include mixins.respond(mobile-small){
       display: block;
-      max-width: 326px;
-      margin-top: 108px;
+      max-width: 280px;
+      margin: 68px auto 0;
     }
   }
 
@@ -272,61 +330,62 @@
     max-width: 38.78%;
     margin-top: 36px;
 
-    @include mixins.respond(tablet){
-      flex: 1 1 100%;
-      max-width: 100%;
-    }
-
-    @include mixins.respond(mobile){
-      flex: 1 1 100%;
-      max-width: 100%;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
+      @include mixins.respond($breakpoint){
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
   }
 
   &__subscribe{
+    @include mixins.respond(tablet){
+      padding: 0 25px;
+    }
+
     h4{
       font-family: variables.$font-family-primary;
-      font-size: variables.$font-size-full-xxxl;
+      font-size: 39px;
       font-weight: variables.$font-weight-bold;
       margin-bottom: 36px;
 
       @include mixins.respond(laptop){
-        font-size: variables.$font-size-mobile-title-m;
+        font-size: 31px;
         margin-bottom: 24px;
       }
 
-      @include mixins.respond(tablet){
-        font-size: variables.$font-size-full-xxl;
+      @include mixins.respond(tablet-large){
+        font-size: 31px;
         margin-bottom: 18px;
       }
 
-      @include mixins.respond(mobile){
-        font-size: variables.$font-size-full-xxl;
-        margin-bottom: 20px;
+      @each $breakpoint in tablet, mobile, mobile-small {
+        @include mixins.respond($breakpoint){
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
       }
     }
   }
 
   &__text_subscribe{
-    font-size: variables.$font-size-full-m;
+    font-size: 19px;
     letter-spacing: 0.025em;
     margin-bottom: 50px;
 
-    @include mixins.respond(laptop){
-      font-size: variables.$font-size-full-xxs;
-      margin-bottom: 40px;
+    @each $breakpoint in tablet-large, tablet {
+      @include mixins.respond($breakpoint){
+        font-size: 14px;
+        margin-bottom: 46px;
+      }
     }
 
-    @include mixins.respond(tablet){
-      font-size: variables.$font-size-mobile-l;
-      letter-spacing: 0;
-      margin-bottom: 32px;
-    }
-
-    @include mixins.respond(mobile){
-      font-size: variables.$font-size-mobile-l;
-      letter-spacing: 0;
-      margin-bottom: 32px;
+    @each $breakpoint in mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        font-size: 13px;
+        letter-spacing: 0;
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -338,12 +397,26 @@
     gap: 9px;
     margin-left: -10px;
 
+    @include mixins.respond(tablet-large){
+      max-width: 66%;
+      justify-content: center;
+      gap: 16px;
+      margin: 0 auto;
+    }
+
     @include mixins.respond(tablet){
+      max-width: 66%;
+      justify-content: center;
+      gap: 16px;
+      margin: 0 auto;
+    }
+
+    @include mixins.respond(mobile){
       gap: 6px;
       margin-left: -8px;
     }
 
-    @include mixins.respond(mobile){
+    @include mixins.respond(mobile-small){
       gap: 6px;
       margin-left: -8px;
     }
@@ -361,6 +434,11 @@
       padding: 17px 0 18px 8px;
     }
 
+    @include mixins.respond(tablet-large){
+      border-radius: 4px 0 0 4px;
+      padding: 6px 0 10px 11px;
+    }
+
     @include mixins.respond(tablet){
       border-radius: 4px 0 0 4px;
       padding: 6px 0 10px 11px;
@@ -373,19 +451,25 @@
       padding: 6px 0 10px 11px;
     }
 
+    @include mixins.respond(mobile-small){
+      flex: 0 1 181px;
+      max-width: 181px;
+      border-radius: 4px 0 0 4px;
+      padding: 6px 0 10px 11px;
+    }
+
     &::placeholder{
       font-family: variables.$font-family-third;
       font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
-      font-size: variables.$font-size-mobile-xxl;
+      font-size: 15px;
       line-height: 1.71;
+      letter-spacing: 0.02em;
       color: variables.$color-form-placeholder;
 
-      @include mixins.respond(tablet){
-        font-size: variables.$font-size-mobile-xs;
-      }
-
-      @include mixins.respond(mobile){
-        font-size: variables.$font-size-mobile-xs;
+      @each $breakpoint in tablet-large, tablet, mobile, mobile-small {
+        @include mixins.respond($breakpoint){
+          font-size: 10px;
+        }
       }
     }
   }
@@ -401,6 +485,10 @@
     @include mixins.respond(mobile){
       flex: 0 1 97px;
     }
+
+    @include mixins.respond(mobile-small){
+      flex: 0 1 97px;
+    }
   }
 
   &__form-btn-inner{
@@ -408,20 +496,17 @@
     text-align: center;
     font-family: variables.$font-family-third;
     font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
-    font-size: variables.$font-size-mobile-xxl;
+    font-size: 15px;
     font-weight: variables.$font-weight-medium;
     line-height: 1.43;
     padding: 12px 0 16px;
     border-radius: 0 6px 6px 0;
 
-    @include mixins.respond(tablet){
-      font-size: variables.$font-size-mobile-xs;
-      padding: 7px 22px 10px;
-    }
-
-    @include mixins.respond(mobile){
-      font-size: variables.$font-size-mobile-xs;
-      padding: 7px 22px 10px;
+    @each $breakpoint in tablet-large, tablet, mobile, mobile-small {
+      @include mixins.respond($breakpoint){
+        font-size: 10px;
+        padding: 7px 22px 10px;
+      }
     }
   }
 }
