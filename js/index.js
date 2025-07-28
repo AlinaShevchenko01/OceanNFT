@@ -61,7 +61,7 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
       }
   });
 },{
-    rootMargin: '0px 300px 300px 0px'
+    rootMargin: '300px 300px 300px 0px'
 });
 
 document.querySelectorAll('img[data-src]').forEach((img) => {
