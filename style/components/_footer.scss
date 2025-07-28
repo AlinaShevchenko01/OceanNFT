@@ -7,7 +7,7 @@
     font-family: variables.$font-family-third;
     font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
     color: variables.$color-footer-2;
-    padding: 0 32px 40px 83px;
+    padding: 0 80px 40px 32px;
     margin: 0 auto;
 
     @include mixins.respond(laptop){

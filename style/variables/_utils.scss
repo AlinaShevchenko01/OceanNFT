@@ -97,6 +97,12 @@
       font-size: 20px;
     }
 
+    @each $breakpoint in laptop, tablet-large{
+      @include mixins.respond($breakpoint){
+        font-size: 20p
+      }
+    }
+
     @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
       @include mixins.respond($breakpoint){
         font-size: 13px;

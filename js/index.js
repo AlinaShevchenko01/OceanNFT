@@ -40,8 +40,33 @@ window.addEventListener('resize', (e) => {
     }
 });
 
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          const img = entry.target;
+
+          if (img.dataset.src){
+              img.src = img.dataset.src;
+          }
+
+          if (img.dataset.srcset){
+              img.srcset = img.dataset.srcset;
+          }
+
+          if (img.dataset.sizes){
+              img.sizes = img.dataset.sizes;
+          }
+
+          observer.unobserve(img);
+      }
+  })
+})
+
+document.querySelectorAll('img[data-src]').forEach((img) => {
+    imageObserver.observe(img);
+})
+
 const swiperTopNft = new Swiper ('.top-nft__swiper', {
-    loop: true,
     grabCursor: true,
 
     breakpoints: {
@@ -85,7 +110,6 @@ tabButtons.forEach((tabButton,index) => {
             tabButtons.forEach(btn =>{
                 if (btn.classList.contains('active')) {
                     btn.classList.remove('active');
-                    console.log(index)
                 }
             });
             tabButtons[index].classList.add('active');
@@ -93,7 +117,6 @@ tabButtons.forEach((tabButton,index) => {
             tabSkins.forEach(skin =>{
                 if (skin.classList.contains('active')) {
                     skin.classList.remove('active');
-                    console.log(index)
                 }
             });
             tabSkins[index].classList.add('active');
@@ -102,7 +125,6 @@ tabButtons.forEach((tabButton,index) => {
 })
 
 const swiperAccounts = new Swiper ('.collections__swiper-accounts', {
-    loop: true,
     grabCursor: true,
 
     breakpoints: {

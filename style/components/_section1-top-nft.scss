@@ -81,18 +81,22 @@
 
     @include mixins.respond(laptop){
       max-width: 439px;
-      object-fit: contain;
     }
 
-    @each $breakpoint in tablet-large, tablet, mobile, mobile-small{
-      @include mixins.respond($breakpoint){
-        max-width: 430px;
-        object-fit: contain;
-      }
+    @include mixins.respond(tablet-large){
+      max-width: 430px;
+    }
+
+    @include mixins.respond(tablet){
+      max-width: 380px;
+    }
+
+    @include mixins.respond(mobile){
+      max-width: 320px;
     }
 
     @include mixins.respond(mobile-small){
-      object-fit: contain;
+      max-width: 280px;
     }
   }
 
