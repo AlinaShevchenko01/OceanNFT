@@ -3288,6 +3288,11 @@ h2 {
     margin-bottom: 12px;
   }
 }
+@media (min-width: 375px) and (max-width: 575px) {
+  .top-nft__cards .cards__wrapper .cards__check-mark {
+    margin-left: 14px;
+  }
+}
 .top-nft__cards .cards__wrapper .cards__coin {
   margin-top: 4px;
 }

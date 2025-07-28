@@ -150,6 +150,12 @@
         }
       }
 
+      .cards__check-mark{
+        @include mixins.respond(mobile){
+          margin-left: 14px;
+        }
+      }
+
       .cards__coin{
         margin-top: 4px;
 
