@@ -1346,11 +1346,11 @@ h2 {
 .footer__logo svg {
   fill: none;
   background: linear-gradient(130deg, #FF56F6 18.31%, #B936EE 43.26%, #3bace2 85.44%, #406AFF 100%);
-  -webkit-mask: url("../../assets/svg/eth.svg");
+  -webkit-mask: url("/OceanNFT/assets/svg/eth.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
-  mask: url("../../assets/svg/eth.svg");
+  mask: url("/OceanNFT/assets/svg/eth.svg");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
