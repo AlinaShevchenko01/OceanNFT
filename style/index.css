@@ -1056,6 +1056,7 @@ h2 {
   font-feature-settings: "salt" 1, "calt" 1, "liga" 1;
   color: #d9dbe1;
   padding: 0 32px 40px 83px;
+  margin: 0 auto;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .footer__wrapper {
@@ -1066,28 +1067,24 @@ h2 {
   .footer__wrapper {
     max-width: 100%;
     padding: 0 25px 98px;
-    margin: 0 auto;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .footer__wrapper {
     max-width: 100%;
     padding: 0 25px 98px;
-    margin: 0 auto;
   }
 }
 @media (min-width: 375px) and (max-width: 575px) {
   .footer__wrapper {
     max-width: 100%;
     padding: 0 25px 98px;
-    margin: 0 auto;
   }
 }
 @media (max-width: 374px) {
   .footer__wrapper {
     max-width: 100%;
     padding: 0 25px 98px;
-    margin: 0 auto;
   }
 }
 .footer__container {

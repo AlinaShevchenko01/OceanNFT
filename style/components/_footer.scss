@@ -8,6 +8,7 @@
     font-feature-settings:  'salt' 1, 'calt'1, 'liga' 1;
     color: variables.$color-footer-2;
     padding: 0 32px 40px 83px;
+    margin: 0 auto;
 
     @include mixins.respond(laptop){
       padding: 0 32px 32px;
@@ -17,7 +18,6 @@
       @include mixins.respond($breakpoint){
         max-width: 100%;
         padding: 0 25px 98px;
-        margin: 0 auto;
       }
     }
   }
