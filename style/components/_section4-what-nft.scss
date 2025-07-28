@@ -3,7 +3,7 @@
 
 .what-NFT{
   position: relative;
-  background-image: url("../../assets/img/section4-what-nft/section4-bg1.webp");
+  background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1.webp");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 556px;
@@ -18,17 +18,17 @@
 
   @include mixins.respond(tablet){
     background-size: contain;
-    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 
   @include mixins.respond(mobile){
     background-size: 100% 300px;
-    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 
   @include mixins.respond(mobile-small){
     background-size: 100% 300px;
-    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 
   &__wrapper{

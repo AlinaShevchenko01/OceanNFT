@@ -48,7 +48,7 @@
       left: 834px;
       width: 118px;
       height: 23px;
-      background: url("../../assets/svg/wave.svg") no-repeat center/contain;
+      background: url("/OceanNFT/assets/svg/wave.svg") no-repeat center/contain;
 
       @each $breakpoint in laptop, tablet-large, tablet, mobile, mobile-small {
         @include mixins.respond($breakpoint){
@@ -458,11 +458,11 @@
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25),
                0 4px 4px 0 rgba(0, 0, 0, 0.25),
                0 4px 4px 0 rgba(0, 0, 0, 0.25);
-   -webkit-mask-image: url('../../assets/img/hero/cards-mask.webp');
+   -webkit-mask-image: url('/OceanNFT/assets/img/hero/cards-mask.webp');
    -webkit-mask-repeat: no-repeat;
    -webkit-mask-position: center;
    -webkit-mask-size: cover;
-   mask-image: url('../../assets/img/hero/cards-mask.webp');
+   mask-image: url('/OceanNFT/assets/img/hero/cards-mask.webp');
    mask-repeat: no-repeat;
    mask-position: center;
    mask-size: cover;

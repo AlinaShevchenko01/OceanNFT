@@ -452,13 +452,13 @@ h2 {
 
 @font-face {
   font-family: "Alethia Next";
-  src: url("../../fonts/alethianext.woff2") format("woff2"), url("../../fonts/alethianext.woff") format("woff");
+  src: url("/OceanNFT/fonts/alethianext.woff2") format("woff2"), url("../../fonts/alethianext.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Spartan";
-  src: url("../../fonts/spartan.woff2") format("woff2"), url("../../fonts/spartan.woff") format("woff");
+  src: url("/OceanNFT/fonts/spartan.woff2") format("woff2"), url("../../fonts/spartan.woff") format("woff");
   font-weight: 600;
   font-display: swap;
 }
@@ -1814,11 +1814,11 @@ h2 {
   width: 18px;
   height: 28px;
   background: linear-gradient(130deg, #FF56F6 18.31%, #B936EE 43.26%, #3bace2 85.44%, #406AFF 100%);
-  -webkit-mask: url("../../assets/svg/eth.svg");
+  -webkit-mask: url("/OceanNFT/assets/svg/eth.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
-  mask: url("../../assets/svg/eth.svg");
+  mask: url("/OceanNFT/assets/svg/eth.svg");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -2097,7 +2097,7 @@ h2 {
   left: 834px;
   width: 118px;
   height: 23px;
-  background: url("../../assets/svg/wave.svg") no-repeat center/contain;
+  background: url("/OceanNFT/assets/svg/wave.svg") no-repeat center/contain;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .hero__wrapper::after {
@@ -2672,11 +2672,11 @@ h2 {
 .hero__card-fon {
   max-width: 100%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  -webkit-mask-image: url("../../assets/img/hero/cards-mask.webp");
+  -webkit-mask-image: url("/OceanNFT/assets/img/hero/cards-mask.webp");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: cover;
-  mask-image: url("../../assets/img/hero/cards-mask.webp");
+  mask-image: url("/OceanNFT/assets/img/hero/cards-mask.webp");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;
@@ -3968,7 +3968,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   font-family: "Rajdhani", sans-serif;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), url("../../assets/img/section2-explore-collections/bg_photo.webp") top center/contain no-repeat;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), url("/OceanNFT/assets/img/section2-explore-collections/bg_photo.webp") top center/contain no-repeat;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border: 3px solid;
@@ -4766,7 +4766,7 @@ h2 {
 
 .what-NFT {
   position: relative;
-  background-image: url("../../assets/img/section4-what-nft/section4-bg1.webp");
+  background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1.webp");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 556px;
@@ -4784,19 +4784,19 @@ h2 {
 @media (min-width: 576px) and (max-width: 768px) {
   .what-NFT {
     background-size: contain;
-    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 }
 @media (min-width: 375px) and (max-width: 575px) {
   .what-NFT {
     background-size: 100% 300px;
-    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 }
 @media (max-width: 374px) {
   .what-NFT {
     background-size: 100% 300px;
-    background-image: url("../../assets/img/section4-what-nft/section4-bg1-small.webp");
+    background-image: url("/OceanNFT/assets/img/section4-what-nft/section4-bg1-small.webp");
   }
 }
 .what-NFT__wrapper {
