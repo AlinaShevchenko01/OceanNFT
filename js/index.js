@@ -59,8 +59,10 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 
           observer.unobserve(img);
       }
-  })
-})
+  });
+},{
+    rootMargin: '200px'
+});
 
 document.querySelectorAll('img[data-src]').forEach((img) => {
     imageObserver.observe(img);
